@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qBY-WG-Htu">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="G7R-Nm-NJJ">
+            <objects>
+                <viewController storyboardIdentifier="SignInVC" id="qBY-WG-Htu" customClass="LoginVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k6V-gz-xFl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="jBR-nA-XzY">
+                                <rect key="frame" x="137.66666666666666" y="84" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kOa-7t-AdI"/>
+                                    <constraint firstAttribute="height" constant="100" id="qI0-CG-Hgx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Empecemos!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmr-oM-GtR">
+                                <rect key="frame" x="123.66666666666666" y="244.00000000000003" width="127.66666666666666" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQt-jb-UUs" userLabel="EmailStack">
+                                <rect key="frame" x="20" y="321.33333333333331" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0dn-XT-0RY">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="AMi-P1-OFa"/>
+                                            <constraint firstAttribute="height" constant="50" id="QVU-L0-rJZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-aS-asg">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXA-wo-abA">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guG-vu-qF1">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="48G-WZ-mbt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="guG-vu-qF1" secondAttribute="trailing" id="36k-h6-s4r"/>
+                                            <constraint firstAttribute="trailing" secondItem="AXA-wo-abA" secondAttribute="trailing" id="Ka3-UJ-Kh4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4ZD-aS-asg" firstAttribute="centerY" secondItem="JQt-jb-UUs" secondAttribute="centerY" id="pKt-65-3dC"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ZD-aS-asg" secondAttribute="trailing" id="wum-Gm-bL5"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dyz-bR-jWZ" userLabel="PasswordStack">
+                                <rect key="frame" x="20" y="411.33333333333331" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasswordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cUT-qf-89K">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="M24-GC-weo"/>
+                                            <constraint firstAttribute="height" constant="50" id="yAf-XT-yQc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pDI-ww-YNa">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-Kz-Jf4">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHW-59-0Y3">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="ZV9-06-iVj"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JHW-59-0Y3" secondAttribute="trailing" id="2uC-bj-qho"/>
+                                            <constraint firstAttribute="trailing" secondItem="PxA-Kz-Jf4" secondAttribute="trailing" id="g0C-pU-Efk"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pDI-ww-YNa" secondAttribute="trailing" id="62l-Vi-d4G"/>
+                                    <constraint firstItem="pDI-ww-YNa" firstAttribute="centerY" secondItem="Dyz-bR-jWZ" secondAttribute="centerY" id="dNc-af-dK4"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ay-sP-5yi">
+                                <rect key="frame" x="0.0" y="486.33333333333331" width="375" height="78.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6i-D5-nYQ" customClass="ActionButton" customModule="Master247" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="14.333333333333371" width="335" height="50"/>
+                                        <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cai-kJ-MyR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="¡INICIAR SESIÓN!">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="qBY-WG-Htu" eventType="touchUpInside" id="wdj-m1-CID"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="s6i-D5-nYQ" firstAttribute="leading" secondItem="9Ay-sP-5yi" secondAttribute="leading" constant="20" id="3pd-SX-u5p"/>
+                                    <constraint firstItem="s6i-D5-nYQ" firstAttribute="centerY" secondItem="9Ay-sP-5yi" secondAttribute="centerY" id="AAc-Xt-4F8"/>
+                                    <constraint firstItem="s6i-D5-nYQ" firstAttribute="centerX" secondItem="9Ay-sP-5yi" secondAttribute="centerX" id="FaJ-qo-hfx"/>
+                                    <constraint firstAttribute="trailing" secondItem="s6i-D5-nYQ" secondAttribute="trailing" constant="20" id="rPq-Tv-Jri"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="oI6-mh-UDb" userLabel="SignUpStack">
+                                <rect key="frame" x="20" y="581" width="335" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqn-nx-GGS">
+                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <state key="normal" title="¿Aún no tienes cuenta?">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="HRT-II-6b1" kind="show" id="86c-XC-csj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fww-gG-9Y4">
+                                        <rect key="frame" x="152.66666666666663" y="0.0" width="182.33333333333337" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <state key="normal" title="¡Registrate ahora!"/>
+                                        <connections>
+                                            <segue destination="HRT-II-6b1" kind="show" id="UHV-YA-HME"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gp-Mf-sgC">
+                                <rect key="frame" x="20" y="745" width="335" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="¿Olvidaste tu contraseña?"/>
+                                <connections>
+                                    <segue destination="dYe-7D-BD0" kind="show" id="Eet-Cu-PaZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Ay-sP-5yi" firstAttribute="trailing" secondItem="Ge6-S6-OFA" secondAttribute="trailing" id="2Io-7m-1Fi"/>
+                            <constraint firstItem="Nmr-oM-GtR" firstAttribute="top" secondItem="jBR-nA-XzY" secondAttribute="bottom" constant="60" id="7a5-lo-8Tw"/>
+                            <constraint firstItem="8gp-Mf-sgC" firstAttribute="bottom" secondItem="Ge6-S6-OFA" secondAttribute="bottom" id="C7M-YS-ysz"/>
+                            <constraint firstItem="JQt-jb-UUs" firstAttribute="top" secondItem="Nmr-oM-GtR" secondAttribute="bottom" constant="50" id="HsA-Rm-mK8"/>
+                            <constraint firstItem="jBR-nA-XzY" firstAttribute="centerX" secondItem="Ge6-S6-OFA" secondAttribute="centerX" id="LH0-fh-z62"/>
+                            <constraint firstItem="JQt-jb-UUs" firstAttribute="leading" secondItem="Ge6-S6-OFA" secondAttribute="leading" constant="20" id="NLM-T3-Okv"/>
+                            <constraint firstItem="Nmr-oM-GtR" firstAttribute="centerX" secondItem="Ge6-S6-OFA" secondAttribute="centerX" id="Oqn-F4-MCo"/>
+                            <constraint firstItem="oI6-mh-UDb" firstAttribute="leading" secondItem="Ge6-S6-OFA" secondAttribute="leading" constant="20" id="Uga-9l-d5X"/>
+                            <constraint firstItem="9Ay-sP-5yi" firstAttribute="top" secondItem="Dyz-bR-jWZ" secondAttribute="bottom" constant="25" id="VkO-TJ-yJ7"/>
+                            <constraint firstItem="oI6-mh-UDb" firstAttribute="top" secondItem="9Ay-sP-5yi" secondAttribute="bottom" constant="16" id="Z8s-yc-nhP"/>
+                            <constraint firstItem="Ge6-S6-OFA" firstAttribute="trailing" secondItem="JQt-jb-UUs" secondAttribute="trailing" constant="20" id="b1a-cS-47U"/>
+                            <constraint firstItem="Dyz-bR-jWZ" firstAttribute="leading" secondItem="Ge6-S6-OFA" secondAttribute="leading" constant="20" id="fxm-Yg-7ww"/>
+                            <constraint firstItem="9Ay-sP-5yi" firstAttribute="leading" secondItem="Ge6-S6-OFA" secondAttribute="leading" id="h9Q-Yy-css"/>
+                            <constraint firstItem="8gp-Mf-sgC" firstAttribute="leading" secondItem="Ge6-S6-OFA" secondAttribute="leading" constant="20" id="hHZ-JE-RLq"/>
+                            <constraint firstItem="Ge6-S6-OFA" firstAttribute="trailing" secondItem="oI6-mh-UDb" secondAttribute="trailing" constant="20" id="kik-Ft-HDG"/>
+                            <constraint firstItem="Ge6-S6-OFA" firstAttribute="trailing" secondItem="8gp-Mf-sgC" secondAttribute="trailing" constant="20" id="mBH-H8-j3d"/>
+                            <constraint firstItem="oI6-mh-UDb" firstAttribute="top" secondItem="k6V-gz-xFl" secondAttribute="top" constant="581" id="nj1-5J-JWZ"/>
+                            <constraint firstItem="Dyz-bR-jWZ" firstAttribute="top" secondItem="JQt-jb-UUs" secondAttribute="bottom" constant="40" id="pZ0-ip-GYZ"/>
+                            <constraint firstItem="jBR-nA-XzY" firstAttribute="top" secondItem="Ge6-S6-OFA" secondAttribute="top" constant="40" id="yxn-B4-WKd"/>
+                            <constraint firstItem="Ge6-S6-OFA" firstAttribute="trailing" secondItem="Dyz-bR-jWZ" secondAttribute="trailing" constant="20" id="zXf-Gj-5kj"/>
+                            <constraint firstItem="JQt-jb-UUs" firstAttribute="centerX" secondItem="Ge6-S6-OFA" secondAttribute="centerX" id="zkV-9h-G3F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ge6-S6-OFA"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="AXA-wo-abA" id="FGc-VR-xi6"/>
+                        <outlet property="passwordTextField" destination="PxA-Kz-Jf4" id="XLc-ij-gMW"/>
+                        <outlet property="signInButton" destination="s6i-D5-nYQ" id="Bm3-ee-rSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="298-XO-KFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.59999999999999" y="153.69458128078819"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="doN-Ni-zAE">
+            <objects>
+                <viewController id="HRT-II-6b1" customClass="SignUpVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A2M-kZ-qLk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYw-Jb-MSg">
+                                <rect key="frame" x="20" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TfK-HH-smJ"/>
+                                    <constraint firstAttribute="width" constant="20" id="leH-ZF-WaG"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="HRT-II-6b1" eventType="touchUpInside" id="j9Q-1h-8Qc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Ingresa tus datos!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzN-0h-a2w">
+                                <rect key="frame" x="103.00000000000001" y="114" width="169.33333333333337" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="33O-aR-aza" userLabel="NameStack">
+                                <rect key="frame" x="20" y="201.33333333333334" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4xU-Tj-h0T">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="71f-xI-0fQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="n1G-qe-ZnO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FDG-KE-KvY">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombres y apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0Z-rg-oeN">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr4-XI-XrD">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="ZQ0-eX-ZCI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="i0Z-rg-oeN" secondAttribute="trailing" id="N9M-HE-KVD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cr4-XI-XrD" secondAttribute="trailing" id="cvq-LW-SoV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FDG-KE-KvY" firstAttribute="centerY" secondItem="33O-aR-aza" secondAttribute="centerY" id="1Xm-VX-1XL"/>
+                                    <constraint firstAttribute="trailing" secondItem="FDG-KE-KvY" secondAttribute="trailing" id="AUg-3T-6xI"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="YWf-vX-O7r" userLabel="PhoneStack">
+                                <rect key="frame" x="20" y="271.33333333333331" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueSmartphone" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-7P-FMi">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="AgT-ed-crD"/>
+                                            <constraint firstAttribute="height" constant="50" id="gsS-9I-xdS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yLd-fy-erC">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número telefónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-1g-SVE">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ok1-04-d6D">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="HeR-fo-xSJ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3Mh-1g-SVE" secondAttribute="trailing" id="4R9-Yg-jEE"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ok1-04-d6D" secondAttribute="trailing" id="LHd-MV-HBh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yLd-fy-erC" secondAttribute="trailing" id="Cmj-rf-isq"/>
+                                    <constraint firstItem="yLd-fy-erC" firstAttribute="centerY" secondItem="YWf-vX-O7r" secondAttribute="centerY" id="sZK-4q-dkH"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-jh-xJV" userLabel="EmailStack">
+                                <rect key="frame" x="20" y="341.33333333333331" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BhV-ie-Kpz">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GLI-8q-FyW"/>
+                                            <constraint firstAttribute="width" constant="50" id="rH8-3H-YOf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1D1-bK-PX6">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXK-0f-UHY">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aga-KE-chb">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="X8G-QC-vce"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aga-KE-chb" secondAttribute="trailing" id="WVm-aN-LIb"/>
+                                            <constraint firstAttribute="trailing" secondItem="gXK-0f-UHY" secondAttribute="trailing" id="lik-K0-kKt"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1D1-bK-PX6" secondAttribute="trailing" id="hqU-Zy-xZS"/>
+                                    <constraint firstItem="1D1-bK-PX6" firstAttribute="centerY" secondItem="k7q-jh-xJV" secondAttribute="centerY" id="xD8-Xp-ScE"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-pJ-G82" userLabel="PasswordStack">
+                                <rect key="frame" x="20" y="411.33333333333331" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasswordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wnq-GZ-Q6A">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="pIj-am-3nL"/>
+                                            <constraint firstAttribute="height" constant="50" id="xVq-E1-AUw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="I6Q-go-sAt">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4QU-dA-xsf">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeQ-sT-IGB">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="mgc-7a-IkF"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4QU-dA-xsf" secondAttribute="trailing" id="LY5-xk-3ZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="LeQ-sT-IGB" secondAttribute="trailing" id="Pe3-qZ-EAd"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="I6Q-go-sAt" secondAttribute="trailing" id="daQ-pA-Hjx"/>
+                                    <constraint firstItem="I6Q-go-sAt" firstAttribute="centerY" secondItem="dkn-pJ-G82" secondAttribute="centerY" id="tVR-rD-Qpf"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5w-fk-XuM" userLabel="ConfirmPasswordStack">
+                                <rect key="frame" x="20" y="481.33333333333331" width="335" height="49.999999999999943"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasswordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-Se-kJE">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="LSk-hJ-6Pn"/>
+                                            <constraint firstAttribute="height" constant="50" id="qJv-gP-d6k"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mnt-Mp-Jom">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fQ-TE-eTo">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxi-c6-r8p">
+                                                <rect key="frame" x="0.0" y="48.000000000000057" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="ZyS-y1-8IC"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3fQ-TE-eTo" secondAttribute="trailing" id="YlY-9C-TR1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hxi-c6-r8p" secondAttribute="trailing" id="lqf-gI-mrg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mnt-Mp-Jom" firstAttribute="centerY" secondItem="m5w-fk-XuM" secondAttribute="centerY" id="BAJ-4f-GtW"/>
+                                    <constraint firstAttribute="trailing" secondItem="mnt-Mp-Jom" secondAttribute="trailing" id="amZ-Ke-jlX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Al registrarte aceptas nuestro contrato de terminos y condiciones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StU-zq-pEJ">
+                                <rect key="frame" x="20" y="651.33333333333337" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1E-fC-uiR">
+                                <rect key="frame" x="20" y="702.33333333333337" width="335" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Puedes ver el contrato aquí"/>
+                                <connections>
+                                    <segue destination="F7v-cA-51t" kind="show" id="he8-o0-wLw"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenVerifiedMark" translatesAutoresizingMaskIntoConstraints="NO" id="azG-3i-DJg">
+                                <rect key="frame" x="335" y="425.33333333333331" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="w4O-Y0-AOK"/>
+                                    <constraint firstAttribute="height" constant="20" id="yjc-n8-THh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenVerifiedMark" translatesAutoresizingMaskIntoConstraints="NO" id="4d1-pG-Dbt">
+                                <rect key="frame" x="335" y="495.33333333333331" width="20" height="19.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Ca0-Vv-vYj"/>
+                                    <constraint firstAttribute="height" constant="20" id="DmG-8y-FOb"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHV-XE-qd4">
+                                <rect key="frame" x="0.0" y="708" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5Y-0v-OIB" customClass="ActionButton" customModule="Master247" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="10" width="335" height="50"/>
+                                        <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pbF-Jl-Do9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="¡REGISTRAR!">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="HRT-II-6b1" eventType="touchUpInside" id="nHY-ee-K3f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="4Zd-gc-tsF"/>
+                                    <constraint firstItem="v5Y-0v-OIB" firstAttribute="leading" secondItem="tHV-XE-qd4" secondAttribute="leading" constant="20" id="BQO-ZJ-9A3"/>
+                                    <constraint firstAttribute="trailing" secondItem="v5Y-0v-OIB" secondAttribute="trailing" constant="20" id="PCx-sO-cbZ"/>
+                                    <constraint firstItem="v5Y-0v-OIB" firstAttribute="centerY" secondItem="tHV-XE-qd4" secondAttribute="centerY" id="SHH-2x-IEN"/>
+                                    <constraint firstItem="v5Y-0v-OIB" firstAttribute="centerX" secondItem="tHV-XE-qd4" secondAttribute="centerX" id="gcH-4C-IZx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k7q-jh-xJV" firstAttribute="top" secondItem="YWf-vX-O7r" secondAttribute="bottom" constant="20" id="5gM-Uc-i54"/>
+                            <constraint firstItem="z1E-fC-uiR" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="7Jp-c4-vfS"/>
+                            <constraint firstItem="StU-zq-pEJ" firstAttribute="top" secondItem="m5w-fk-XuM" secondAttribute="bottom" constant="120" id="7Tk-CL-8GT"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="azG-3i-DJg" secondAttribute="trailing" constant="20" id="9jt-Cn-dzI"/>
+                            <constraint firstItem="StU-zq-pEJ" firstAttribute="leading" secondItem="A2M-kZ-qLk" secondAttribute="leading" constant="20" id="9oE-n7-HaA"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="YWf-vX-O7r" secondAttribute="trailing" constant="20" id="GQv-db-PbG"/>
+                            <constraint firstItem="fzN-0h-a2w" firstAttribute="centerX" secondItem="Ym2-dJ-vkK" secondAttribute="centerX" id="Giu-Zy-lm1"/>
+                            <constraint firstItem="MYw-Jb-MSg" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="Psq-Jx-dG0"/>
+                            <constraint firstItem="tHV-XE-qd4" firstAttribute="trailing" secondItem="Ym2-dJ-vkK" secondAttribute="trailing" id="QNS-Da-SPW"/>
+                            <constraint firstItem="YWf-vX-O7r" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="UwA-de-sfM"/>
+                            <constraint firstItem="YWf-vX-O7r" firstAttribute="top" secondItem="33O-aR-aza" secondAttribute="bottom" constant="20" id="VQs-1c-1Wk"/>
+                            <constraint firstItem="33O-aR-aza" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="X5u-27-iE7"/>
+                            <constraint firstItem="tHV-XE-qd4" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" id="XMA-jp-SD8"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="k7q-jh-xJV" secondAttribute="trailing" constant="20" id="Y2K-XU-qST"/>
+                            <constraint firstAttribute="trailing" secondItem="StU-zq-pEJ" secondAttribute="trailing" constant="20" id="YCi-qq-D0w"/>
+                            <constraint firstItem="fzN-0h-a2w" firstAttribute="top" secondItem="Ym2-dJ-vkK" secondAttribute="top" constant="70" id="Yw7-iO-Kfu"/>
+                            <constraint firstItem="33O-aR-aza" firstAttribute="top" secondItem="fzN-0h-a2w" secondAttribute="bottom" constant="60" id="Z8U-RH-hRP"/>
+                            <constraint firstItem="k7q-jh-xJV" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="ZBE-yz-com"/>
+                            <constraint firstItem="dkn-pJ-G82" firstAttribute="top" secondItem="k7q-jh-xJV" secondAttribute="bottom" constant="20" id="bo4-YD-UIF"/>
+                            <constraint firstItem="tHV-XE-qd4" firstAttribute="bottom" secondItem="Ym2-dJ-vkK" secondAttribute="bottom" id="cn6-Hl-PFz"/>
+                            <constraint firstItem="MYw-Jb-MSg" firstAttribute="top" secondItem="Ym2-dJ-vkK" secondAttribute="top" constant="20" id="eIt-Nl-n1Z"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="m5w-fk-XuM" secondAttribute="trailing" constant="20" id="fgU-bJ-XwI"/>
+                            <constraint firstItem="4d1-pG-Dbt" firstAttribute="centerY" secondItem="3fQ-TE-eTo" secondAttribute="centerY" id="hjq-Ke-ygm"/>
+                            <constraint firstItem="azG-3i-DJg" firstAttribute="centerY" secondItem="4QU-dA-xsf" secondAttribute="centerY" id="icg-Bm-GGE"/>
+                            <constraint firstItem="dkn-pJ-G82" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="mRF-5r-ZBy"/>
+                            <constraint firstItem="z1E-fC-uiR" firstAttribute="top" secondItem="StU-zq-pEJ" secondAttribute="bottom" constant="10" id="nUf-5u-h4e"/>
+                            <constraint firstItem="StU-zq-pEJ" firstAttribute="centerX" secondItem="Ym2-dJ-vkK" secondAttribute="centerX" id="pBo-2K-l0z"/>
+                            <constraint firstItem="m5w-fk-XuM" firstAttribute="top" secondItem="dkn-pJ-G82" secondAttribute="bottom" constant="20" id="pTP-mN-wes"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="33O-aR-aza" secondAttribute="trailing" constant="20" id="qCX-zM-PtN"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="4d1-pG-Dbt" secondAttribute="trailing" constant="20" id="rrF-FI-eXx"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="z1E-fC-uiR" secondAttribute="trailing" constant="20" id="tdR-4p-xb3"/>
+                            <constraint firstItem="m5w-fk-XuM" firstAttribute="leading" secondItem="Ym2-dJ-vkK" secondAttribute="leading" constant="20" id="yis-8v-Zv1"/>
+                            <constraint firstItem="Ym2-dJ-vkK" firstAttribute="trailing" secondItem="dkn-pJ-G82" secondAttribute="trailing" constant="20" id="z1U-BZ-NiF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ym2-dJ-vkK"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordCheckMark" destination="4d1-pG-Dbt" id="Vge-NI-abv"/>
+                        <outlet property="confirmPasswordTextField" destination="3fQ-TE-eTo" id="MkD-3P-dJf"/>
+                        <outlet property="emailTextField" destination="gXK-0f-UHY" id="h9M-cg-xIQ"/>
+                        <outlet property="nameAndLastnameTextField" destination="i0Z-rg-oeN" id="jrx-Nc-KHd"/>
+                        <outlet property="passwordCheckMark" destination="azG-3i-DJg" id="sNm-Ar-wIl"/>
+                        <outlet property="passwordTextField" destination="4QU-dA-xsf" id="vfQ-PK-FOv"/>
+                        <outlet property="phoneNumberTextField" destination="3Mh-1g-SVE" id="1CS-wt-f21"/>
+                        <outlet property="signUpButton" destination="v5Y-0v-OIB" id="y9y-Y9-OfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXe-NJ-BwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.60000000000002" y="153.69458128078819"/>
+        </scene>
+        <!--Forgot PasswordVC-->
+        <scene sceneID="uQo-rj-Pmo">
+            <objects>
+                <viewController id="dYe-7D-BD0" customClass="ForgotPasswordVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rK9-2T-xHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-iK-ezj">
+                                <rect key="frame" x="20" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="rg5-mB-7nC"/>
+                                    <constraint firstAttribute="height" constant="20" id="sgt-96-vwV"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="dYe-7D-BD0" eventType="touchUpInside" id="dPW-ph-QSh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-f8-6P7">
+                                <rect key="frame" x="20" y="134" width="335" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Li-Rh-CFi" userLabel="EmailStack">
+                                <rect key="frame" x="20" y="201.33333333333334" width="335" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xmk-KC-AZl">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="XrW-Ui-mE7"/>
+                                            <constraint firstAttribute="height" constant="50" id="cFt-Kk-jSL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GiL-R5-jZ0">
+                                        <rect key="frame" x="67" y="0.0" width="268" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3V-ZC-a3h">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6P-5d-1gw">
+                                                <rect key="frame" x="0.0" y="48" width="268" height="2"/>
+                                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="UQ4-wD-pck"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="y6P-5d-1gw" secondAttribute="trailing" id="EpI-YO-QEi"/>
+                                            <constraint firstAttribute="trailing" secondItem="O3V-ZC-a3h" secondAttribute="trailing" id="mfg-6h-vzg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GiL-R5-jZ0" secondAttribute="trailing" id="GdP-DG-d7T"/>
+                                    <constraint firstItem="GiL-R5-jZ0" firstAttribute="centerY" secondItem="4Li-Rh-CFi" secondAttribute="centerY" id="uIH-NV-Qhr"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu correo electronico y en breve te llegara un correo con los pasos a seguir." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsb-lI-guB">
+                                <rect key="frame" x="20" y="271.33333333333331" width="335" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GN8-Bw-fUV">
+                                <rect key="frame" x="0.0" y="708" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-Se-JPf" customClass="ActionButton" customModule="Master247" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="10" width="335" height="50"/>
+                                        <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="IaZ-pA-IIw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="RECUPERAR CONTRASEÑA">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonPressed:" destination="dYe-7D-BD0" eventType="touchUpInside" id="mKd-3k-ESo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0JC-Se-JPf" firstAttribute="leading" secondItem="GN8-Bw-fUV" secondAttribute="leading" constant="20" id="6Xz-Ra-ASY"/>
+                                    <constraint firstItem="0JC-Se-JPf" firstAttribute="centerY" secondItem="GN8-Bw-fUV" secondAttribute="centerY" id="KrE-62-HHt"/>
+                                    <constraint firstAttribute="height" constant="70" id="Qi5-aA-eoy"/>
+                                    <constraint firstAttribute="trailing" secondItem="0JC-Se-JPf" secondAttribute="trailing" constant="20" id="YTI-4p-EQ9"/>
+                                    <constraint firstItem="0JC-Se-JPf" firstAttribute="centerX" secondItem="GN8-Bw-fUV" secondAttribute="centerX" id="sIc-cm-mHh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8gA-bI-lUM" firstAttribute="trailing" secondItem="4Li-Rh-CFi" secondAttribute="trailing" constant="20" id="1d8-Vx-p5R"/>
+                            <constraint firstItem="PTg-iK-ezj" firstAttribute="top" secondItem="8gA-bI-lUM" secondAttribute="top" constant="20" id="5pc-H7-wKg"/>
+                            <constraint firstItem="GN8-Bw-fUV" firstAttribute="bottom" secondItem="8gA-bI-lUM" secondAttribute="bottom" id="Hxb-BR-5eM"/>
+                            <constraint firstItem="GN8-Bw-fUV" firstAttribute="trailing" secondItem="8gA-bI-lUM" secondAttribute="trailing" id="JS9-G3-Dp7"/>
+                            <constraint firstItem="GN8-Bw-fUV" firstAttribute="leading" secondItem="8gA-bI-lUM" secondAttribute="leading" id="Jwt-i4-N6a"/>
+                            <constraint firstItem="PTg-iK-ezj" firstAttribute="leading" secondItem="8gA-bI-lUM" secondAttribute="leading" constant="20" id="Te5-h7-aQg"/>
+                            <constraint firstItem="4Li-Rh-CFi" firstAttribute="top" secondItem="Thc-f8-6P7" secondAttribute="bottom" constant="40" id="Ujs-hW-HDZ"/>
+                            <constraint firstItem="8gA-bI-lUM" firstAttribute="trailing" secondItem="fsb-lI-guB" secondAttribute="trailing" constant="20" id="W9T-xS-4CV"/>
+                            <constraint firstItem="4Li-Rh-CFi" firstAttribute="leading" secondItem="8gA-bI-lUM" secondAttribute="leading" constant="20" id="Ysr-Mq-bYA"/>
+                            <constraint firstItem="8gA-bI-lUM" firstAttribute="trailing" secondItem="Thc-f8-6P7" secondAttribute="trailing" constant="20" id="Zis-yB-5OR"/>
+                            <constraint firstItem="fsb-lI-guB" firstAttribute="top" secondItem="4Li-Rh-CFi" secondAttribute="bottom" constant="20" id="cLX-Fi-B2b"/>
+                            <constraint firstItem="fsb-lI-guB" firstAttribute="leading" secondItem="rK9-2T-xHD" secondAttribute="leading" constant="20" id="cdd-Vp-zOw"/>
+                            <constraint firstItem="Thc-f8-6P7" firstAttribute="leading" secondItem="8gA-bI-lUM" secondAttribute="leading" constant="20" id="gAv-WE-2we"/>
+                            <constraint firstItem="Thc-f8-6P7" firstAttribute="top" secondItem="8gA-bI-lUM" secondAttribute="top" constant="90" id="yrd-zq-tmj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8gA-bI-lUM"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="O3V-ZC-a3h" id="Kea-1l-7Kc"/>
+                        <outlet property="forgotPasswordButton" destination="0JC-Se-JPf" id="42g-9Q-pqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uy-QD-sEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.59999999999999" y="835.71428571428578"/>
+        </scene>
+        <!--Terms And ConditionsVC-->
+        <scene sceneID="c9t-Rs-4n8">
+            <objects>
+                <viewController id="F7v-cA-51t" customClass="TermsAndConditionsVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T7j-pD-NDT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tr-M4-iX4">
+                                <rect key="frame" x="20" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="WwR-ZE-7Wn"/>
+                                    <constraint firstAttribute="width" constant="20" id="gyR-oz-gmk"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="F7v-cA-51t" eventType="touchUpInside" id="y8G-uZ-t8O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINOS Y CONDICIONES DE LA APLICACION MASTER 247" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlY-XL-RPS">
+                                <rect key="frame" x="20" y="104" width="335" height="44"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-ss-RvG">
+                                <rect key="frame" x="20" y="168" width="335" height="610"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">1.	REGLAMENTO DE USO DEL PORTAL MÓVIL (PERSONAS NATURALES Y PERSONAS JURÍDICAS).
+
+El presente documento establece las condiciones mediante las cuales se regirá el uso de la aplicación móvil: Master247 APP Ecuador (en adelante la aplicación), la cual es operada por la Organización Master247.org, Master247.app, Master247.services, Ecuador. 
+La aplicación Master247 funcionará como un nuevo canal para la oferta de servicios enmarcados en la categoría Hogar / Oficina, con el objeto de facilitar a los Clientes / Usuarios el acceso, la búsqueda y contratación de servicios requeridos para su Hogar u Oficina.  
+El USUARIO se compromete a leer los términos y condiciones aquí establecidas, previamente a la descarga de la aplicación, por tanto, en caso de realizar la instalación se entiende que cuenta con el conocimiento integral de este documento y la consecuente aceptación de la totalidad de sus estipulaciones.
+
+El USUARIO reconoce que el ingreso de su información personal, y los datos que contiene la aplicación a su disposición respecto a los servicios activos, la realizan de manera voluntaria, quienes optan por acceder a esta aplicación en Ecuador o desde fuera del territorio nacional, lo hacen por iniciativa propia y son responsables del cumplimiento de las leyes locales, en la medida en que dichas leyes sean aplicables en su correspondiente país. En caso de que se acceda por parte de menores de edad, deben contar con la supervisión de un adulto en todo momento desde la descarga y durante el uso de la aplicación, en el evento en que no se cumpla esta condición, le agradecemos no hacer uso de la aplicación Master247.
+
+2.	ALCANCE Y USO
+
+El USUARIO de la aplicación entiende y acepta que no obstante es operada por Master247.org, Master247.app, Master247.services, Ecuador, la información contenida en la misma será la referente a los oferentes de los servicios, quienes cargarán la información personal y profesional en las diferentes categorías que ha definido la aplicación, por tanto, las funcionalidades ofrecidas por la aplicación serán entregadas por cada oferente del servicio de acuerdo con su vinculación. La aplicación Master247 únicamente actuara como un canal adicional a los ya tradicionalmente utilizados por los usuarios, de contacto y comunicación entre los oferentes de los servicios y los usuarios de los mismos.
+En la aplicación se pondrá a disposición del CLIENTE información y/o permitirá la realización de las transacciones determinadas o habilitadas por Master247 para cada servicio en particular. Master247 podrá adicionar, modificar o eliminar las funcionalidades en cualquier momento, lo cual acepta el USUARIO mediante la instalación de la aplicación. En todo caso, al momento de realizar dichas modificaciones se notificarán al usuario a través de la misma aplicación móvil una vez inicie sesión.
+
+3.	REQUISITOS PARA USO
+
+El usuario deberá contar con un dispositivo móvil inteligente (Smartphone) o Tableta con sistema operativo Android o IOS, cualquiera de estos con acceso a internet, ambos seguros y confiables. Master247, no será responsable por la seguridad de los equipos Smartphone propiedad de los usuarios utilizados para el acceso al canal, ni por la disponibilidad del servicio en los dispositivos en los cuales se descargue la aplicación.
+
+En la forma permitida por la ley, los materiales de la aplicación se suministran sin garantía de ningún género, expresa o implícita, incluyendo sin limitación las garantías de calidad satisfactoria, comerciabilidad, adecuación para un fin particular o no infracción, por tanto, Master247 no garantiza el funcionamiento adecuado en los distintos sistemas operativos o dispositivos en los cuales se haga uso de la aplicación.
+
+Para acceder al portal, EL OFERENTE DE LOS SERVICIOS Y EL CLIENTE contarán con Usuario y Clave, que los identifica en su relación con MASTER247, los cuales serán los mismos utilizados en el PORTAL WEB. Adicional a lo anterior se requerirá a EL CLIENTE, registrar preguntas de seguridad, las cuales serán solicitadas al momento de intentar ingresar al portal, sólo cuando el cliente ingrese desde un equipo registrado no se solicitará responder las preguntas definidas con anterioridad.
+
+4.	OBLIGACIONES DE LOS USUARIOS
+
+El Usuario se obliga a usar la aplicación y los contenidos encontrados en ella de una manera diligente, correcta, lícita y en especial, se compromete a NO realizar las conductas descritas a continuación: 
+
+• (a) Utilizar los contenidos de forma, con fines o efectos contrarios a la ley, a la moral y a las buenas costumbres generalmente aceptadas o al orden público;
+
+• (b) Reproducir, copiar, representar, utilizar, distribuir, transformar o modificar los contenidos de la aplicación, por cualquier procedimiento o sobre cualquier soporte, total o parcial, o permitir el acceso del público a través de cualquier modalidad de comunicación pública;
+
+• (c) Utilizar los contenidos de cualquier manera que entrañen un riesgo de daño o inutilización de la aplicación o de los contenidos o de terceros;
+
+• (d) Suprimir, eludir o manipular el derecho de autor y demás datos identificativos de los derechos de autor incorporados a los contenidos, así como los dispositivos técnicos de protección, o cualesquiera mecanismos de información que pudieren tener los contenidos;
+
+• (e) Emplear los contenidos y, en particular, la información de cualquier clase obtenida a través de la aplicación para distribuir, transmitir, remitir, modificar, rehusar o reportar la publicidad o los contenidos de esta con fines de venta directa o con cualquier otra clase de finalidad comercial, mensajes no solicitados dirigidos a una pluralidad de personas con independencia de su finalidad, así como comercializar o divulgar de cualquier modo dicha información;
+
+• (f) No permitir que terceros ajenos a usted usen la aplicación móvil con su clave;
+
+• (g) Utilizar la aplicación y los contenidos con fines lícitos y/o ilícitos, contrarios a lo establecido en estos Términos y Condiciones, o al uso mismo de la aplicación, que sean lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar o deteriorar la aplicación y los contenidos o impedir la normal utilización o disfrute de esta y de los contenidos por parte de los usuarios.
+
+5.	PROPIEDAD INTELECTUAL
+
+Todo el material informático, gráfico, publicitario, fotográfico, de multimedia, audiovisual y de diseño, así como todos los contenidos, textos y bases de datos puestos a su disposición en esta aplicación están protegidos por derechos de autor y/o propiedad industrial cuyo titular es Master247 Ecuador, o sus compañías filiales, vinculadas o subsidiarias, en algunos casos, de terceros que han autorizado su uso o explotación. Igualmente, el uso en la aplicación de algunos materiales de propiedad de terceros se encuentra expresamente autorizado por la ley o por dichos terceros. Todos los contenidos en la aplicación están protegidos por las normas sobre derecho de autor y por todas las normas nacionales e internacionales que le sean aplicables.
+
+Exceptuando lo expresamente estipulado en estos Términos y Condiciones, queda prohibido todo acto de copia, reproducción, modificación, creación de trabajos derivados, venta o distribución, exhibición de los contenidos de esta aplicación, de manera o por medio alguno, incluyendo, más no limitado a, medios electrónicos, mecánicos, de fotocopiado, de grabación o de cualquier otra índole, sin el permiso previo y por escrito de Master247 Ecuador o del titular de los respectivos derechos.
+
+En ningún caso estos Términos y Condiciones confieren derechos, licencias ni autorizaciones para realizar los actos anteriormente prohibidos. Cualquier uso no autorizado de los contenidos constituirá una violación del presente documento y a las normas vigentes sobre derechos de autor, a las normas vigentes nacionales e internacionales sobre Propiedad Industrial, y a cualquier otra que sea aplicable.
+
+6.	LICENCIA PARA COPIAR PARA USO PERSONAL
+
+Usted podrá leer, visualizar, imprimir y descargar el material de sus productos.
+
+Ninguna parte de la aplicación podrá ser reproducida o transmitida o almacenada en otro sitio web o en otra forma de sistema de recuperación electrónico.
+
+Ya sea que se reconozca específicamente o no, las marcas comerciales, las marcas de servicio y los logos visualizados en esta aplicación pertenecen a la organización Master247.org, Master247.app, Master247.services, Ecuador, sus socios promocionales u otros terceros.
+
+Master247 no interfiere, no toma decisiones, ni garantiza las relaciones que los USUARIOS lleguen a sostener o las vinculaciones con terceros que pauten y/o promocionen sus servicios y productos. Estas marcas de terceros se utilizan solamente para identificar los servicios y productos de sus respectivos propietarios y el patrocinio o el aval por parte de Master247 no se deben inferir con el uso de estas marcas comerciales.
+
+7.	INTEGRACIÓN CON OTRAS APLICACIONES
+
+Los links de Facebook®, Instagram®, twitter® en esta aplicación pueden mostrar contenido que no están bajo el control de Master247.
+
+Aunque esta aplicación de Master247 trata de suministrar links solamente a sitios y aplicaciones de terceros que cumplan con las leyes y regulaciones aplicables y las normas de Master247 Ecuador, el Usuario debe entender que de Master247 Ecuador no tiene control sobre la naturaleza y el contenido de esos sitios y no está recomendando estos sitios, la información que contienen ni los productos o servicios de terceros.
+
+Master247 Ecuador no acepta responsabilidad por el contenido del sitio de un tercero con el cual existe un link de hipertexto y no ofrece garantía (explícita o implícita) en cuanto al contenido de la información en esos sitios, ya que no recomienda estos sitios.
+
+Usted debe verificar las secciones de términos y condiciones, política legal y de privacidad de algunos otros sitios de Master247 o de un tercero con los cuales se enlaza.
+
+Master247 no asume ninguna responsabilidad por pérdida directa, indirecta o consecuencial por el uso de un sitio de un tercero.
+
+8.	USO DE INFORMACIÓN Y PRIVACIDAD
+
+Con la descarga de la APP usted acepta y autoriza que Master247 Ecuador, utilice sus datos en calidad de responsable del tratamiento para fines derivados de la ejecución de la APP. de Master247 Ecuador informa que podrá ejercer sus derechos a conocer, actualizar, rectificar y suprimir su información personal; así como el derecho a revocar el consentimiento otorgado para el tratamiento de datos personales, observando nuestra política de tratamiento de información disponible en: www.master247.org; o a través de usuarios@master247.org, siendo voluntario responder preguntas sobre información sensible o de menores de edad.
+
+Master247 Ecuador podrá dar a conocer, transferir y/o trasmitir sus datos personales dentro y fuera del país a cualquier empresa miembro de la Organización Master247.org, Master247.app, Master247.services, Ecuador, así como a terceros a consecuencia de un contrato, ley o vínculo lícito que así lo requiera, para todo lo anterior otorgo mi autorización expresa e inequívoca.
+
+De conformidad a lo anterior autoriza el tratamiento de su información en los términos señalados, y transfiere a Master247 de manera total, y sin limitación mis derechos de imagen y patrimoniales de autor, de manera voluntaria, previa, explicita, informada e inequívoca.
+
+9.	RESPONSABILIDAD DE MASTER247
+
+MASTER247 procurará garantizar disponibilidad, continuidad o buen funcionamiento de la aplicación. Master247 podrá bloquear, interrumpir o restringir el acceso a esta cuando lo considere necesario para el mejoramiento de la aplicación o por dada de baja de la misma.
+
+Se recomienda al USUARIO tomar medidas adecuadas y actuar diligentemente al momento de acceder a la aplicación, como por ejemplo, contar con programas de protección, antivirus, para manejo de malware, spyware y herramientas similares.
+
+MASTER247 no será responsable por: a) Fuerza mayor o caso fortuito; b) Por la pérdida, extravío o hurto de su dispositivo móvil que implique el acceso de terceros a la aplicación móvil; c) Por errores en la digitación o accesos por parte del cliente; d) Por los perjuicios, lucro cesante, daño emergente, morales, y en general sumas a cargo de Master247, por los servicios prestados por los oferentes, así como retrasos, no cumplimientos, no procesamiento de información o suspensión del servicio del operador móvil o daños en los dispositivos móviles.
+
+10.	 DENEGACIÓN Y RETIRADA DEL ACCESO A LA APLICACIÓN
+
+En el Evento en que un USUARIO incumpla estos Términos y Condiciones, o cualesquiera otras disposiciones que resulten de aplicación, Master247 podrá suspender su acceso a la aplicación.
+
+11.	 TÉRMINOS Y CONDICIONES
+
+El Usuario acepta expresamente los Términos y Condiciones, siendo condición esencial para la utilización de la aplicación. En el evento en que se encuentre en desacuerdo con estos Términos y Condiciones, solicitamos abandonar la aplicación inmediatamente. Master247 podrá modificar los presentes términos y condiciones, avisando a los usuarios de la aplicación mediante publicación en la página web www.master247.org o mediante la difusión de las modificación por algún medio electrónico, redes sociales, SMS y/o correo electrónico, lo cual se entenderá aceptado por el usuario si éste continua con el uso de la aplicación.
+
+12.	 JURISDICCIÓN
+
+Estos términos y condiciones y todo lo que tenga que ver con esta aplicación, se rigen por las leyes de Ecuador.
+
+13.	 USO DE INFORMACIÓN NO PERSONAL
+
+Master247 también recolecta información no personal en forma agregada para seguimiento de datos como el número total de descargas de la aplicación. Utilizamos esta información, que permanece en forma agregada, para entender el comportamiento de la aplicación.
+
+14.	 USO DE DIRECCIONES IP
+
+Una dirección de Protocolo de Internet (IP) es un conjunto de números que se asigna automáticamente a su o dispositivo móvil cuando usted accede a su proveedor de servicios de internet, o a través de la red de área local (LAN) de su organización o la red de área amplia (WAN). Los servidores web automáticamente identifican su dispositivo móvil por la dirección IP asignada a él durante su sesión en línea.
+
+Master247 podrán recolectar direcciones IP para propósitos de administración de sistemas y para auditar el uso de nuestro sitio, todo lo anterior de acuerdo con la autorización de protección de datos que se suscribe para tal efecto. Normalmente no vinculamos la dirección IP de un USUARIO con la información personal de ese usuario, lo que significa que cada sesión de usuario se registra, pero el usuario sigue siendo anónimo para nosotros. Sin embargo, podemos usar las direcciones IP para identificar a los USUARIOS de nuestro sitio cuando sea necesario con el objeto de para exigir el cumplimiento de los términos de uso del sitio, o para proteger nuestro servicio, sitio u otros usuarios.
+
+15.	 SEGURIDAD
+
+Master247 está comprometido en la protección de la seguridad de su información personal. Master247 tiene implementados mecanismos de seguridad que aseguran la protección de la información personal, así como los accesos únicamente al personal y sistemas autorizados, también contra la pérdida, uso indebido y alteración de sus datos de USUARIO bajo nuestro control.
+
+Excepto como se indica a continuación, sólo personal autorizado tiene acceso a la información que nos proporciona. Además, hemos impuesto reglas estrictas a los empleados de Master247 con acceso a las bases de datos que almacenan información del USUARIO o a los servidores que hospedan nuestros servicios.
+
+© 2019 Master247</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Tr-M4-iX4" firstAttribute="top" secondItem="SGF-6Y-KGE" secondAttribute="top" constant="20" id="3jp-4A-XsF"/>
+                            <constraint firstItem="SGF-6Y-KGE" firstAttribute="trailing" secondItem="3wL-ss-RvG" secondAttribute="trailing" constant="20" id="4x2-Wr-vd2"/>
+                            <constraint firstItem="YlY-XL-RPS" firstAttribute="leading" secondItem="SGF-6Y-KGE" secondAttribute="leading" constant="20" id="IoT-Ed-k2o"/>
+                            <constraint firstItem="2Tr-M4-iX4" firstAttribute="leading" secondItem="SGF-6Y-KGE" secondAttribute="leading" constant="20" id="dPC-Wp-zFQ"/>
+                            <constraint firstItem="3wL-ss-RvG" firstAttribute="leading" secondItem="SGF-6Y-KGE" secondAttribute="leading" constant="20" id="glw-ay-vQZ"/>
+                            <constraint firstItem="YlY-XL-RPS" firstAttribute="top" secondItem="SGF-6Y-KGE" secondAttribute="top" constant="60" id="jgQ-vo-pTl"/>
+                            <constraint firstItem="3wL-ss-RvG" firstAttribute="top" secondItem="YlY-XL-RPS" secondAttribute="bottom" constant="20" id="mo9-VF-B8V"/>
+                            <constraint firstItem="SGF-6Y-KGE" firstAttribute="trailing" secondItem="YlY-XL-RPS" secondAttribute="trailing" constant="20" id="pdL-o1-e69"/>
+                            <constraint firstItem="3wL-ss-RvG" firstAttribute="bottom" secondItem="SGF-6Y-KGE" secondAttribute="bottom" id="uBt-CM-UBT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SGF-6Y-KGE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mte-jX-8hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.60000000000002" y="836.45320197044339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackArrow" width="192" height="192"/>
+        <image name="BlueSmartphone" width="384" height="384"/>
+        <image name="EmailIcon" width="96" height="96"/>
+        <image name="GreenVerifiedMark" width="192" height="192"/>
+        <image name="Logo" width="2400" height="2400"/>
+        <image name="PasswordIcon" width="192" height="192"/>
+        <image name="UserIcon" width="192" height="192"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UHV-YA-HME"/>
+    </inferredMetricsTieBreakers>
+</document>
