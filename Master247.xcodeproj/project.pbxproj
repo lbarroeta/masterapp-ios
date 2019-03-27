@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		463D021A224925B5009A55D2 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D0219224925B5009A55D2 /* Worker.swift */; };
+		463D021C224941B9009A55D2 /* OfferentApplicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D021B224941B9009A55D2 /* OfferentApplicationVC.swift */; };
+		463D021E224946B5009A55D2 /* Applicant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D021D224946B5009A55D2 /* Applicant.swift */; };
 		464720D322414EFD0067A0E3 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464720D222414EFD0067A0E3 /* ActionButton.swift */; };
 		464720D6224158F70067A0E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464720D5224158F70067A0E3 /* Constants.swift */; };
 		466F745D2246EFFF00C75F6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F745C2246EFFF00C75F6D /* User.swift */; };
@@ -38,12 +40,18 @@
 		46F3850C2242D5CB00E661B8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3850B2242D5CB00E661B8 /* HomeVC.swift */; };
 		46F3850F2242D9EE00E661B8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3850E2242D9EE00E661B8 /* CategoryCell.swift */; };
 		46F385112242DDDB00E661B8 /* ClientMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F385102242DDDB00E661B8 /* ClientMenuVC.swift */; };
+		46FF227D224B0768003ED11A /* IdentificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF227C224B0768003ED11A /* IdentificationVC.swift */; };
+		46FF227F224B0775003ED11A /* CertificateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF227E224B0775003ED11A /* CertificateVC.swift */; };
+		46FF2281224B07AC003ED11A /* SelectCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF2280224B07AC003ED11A /* SelectCategoryVC.swift */; };
+		46FF2283224B07C0003ED11A /* ProfileImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF2282224B07C0003ED11A /* ProfileImageVC.swift */; };
 		5C07151A8077C0586F850381 /* Pods_Master247.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5750D6A9EFC30C7303013278 /* Pods_Master247.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1770DD32156B05D6C8981249 /* Pods-Master247.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master247.release.xcconfig"; path = "Target Support Files/Pods-Master247/Pods-Master247.release.xcconfig"; sourceTree = "<group>"; };
 		463D0219224925B5009A55D2 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		463D021B224941B9009A55D2 /* OfferentApplicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferentApplicationVC.swift; sourceTree = "<group>"; };
+		463D021D224946B5009A55D2 /* Applicant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicant.swift; sourceTree = "<group>"; };
 		464720D222414EFD0067A0E3 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		464720D5224158F70067A0E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		466F745C2246EFFF00C75F6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -76,6 +84,10 @@
 		46F3850B2242D5CB00E661B8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		46F3850E2242D9EE00E661B8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		46F385102242DDDB00E661B8 /* ClientMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMenuVC.swift; sourceTree = "<group>"; };
+		46FF227C224B0768003ED11A /* IdentificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationVC.swift; sourceTree = "<group>"; };
+		46FF227E224B0775003ED11A /* CertificateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateVC.swift; sourceTree = "<group>"; };
+		46FF2280224B07AC003ED11A /* SelectCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryVC.swift; sourceTree = "<group>"; };
+		46FF2282224B07C0003ED11A /* ProfileImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageVC.swift; sourceTree = "<group>"; };
 		5750D6A9EFC30C7303013278 /* Pods_Master247.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master247.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C0FC52D1253C0F65386F7A /* Pods-Master247.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master247.debug.xcconfig"; path = "Target Support Files/Pods-Master247/Pods-Master247.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +174,7 @@
 				46EBD79A22417FE1003BC6DA /* Category.swift */,
 				466F745C2246EFFF00C75F6D /* User.swift */,
 				463D0219224925B5009A55D2 /* Worker.swift */,
+				463D021D224946B5009A55D2 /* Applicant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +192,7 @@
 		46707B1F22407FED00C00D39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				46FF2279224B06B7003ED11A /* Application */,
 				46EBD79222417C61003BC6DA /* Shared */,
 				46F3850A2242D5BA00E661B8 /* Client */,
 				46EBD79322417C73003BC6DA /* Admin */,
@@ -248,6 +262,7 @@
 			children = (
 				46F3850B2242D5CB00E661B8 /* HomeVC.swift */,
 				46E06B032244229000A36194 /* OfferentsVC.swift */,
+				463D021B224941B9009A55D2 /* OfferentApplicationVC.swift */,
 				46F385102242DDDB00E661B8 /* ClientMenuVC.swift */,
 			);
 			path = Client;
@@ -260,6 +275,17 @@
 				46E06AFF22441EAA00A36194 /* OfferentCell.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		46FF2279224B06B7003ED11A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				46FF2280224B07AC003ED11A /* SelectCategoryVC.swift */,
+				46FF227C224B0768003ED11A /* IdentificationVC.swift */,
+				46FF227E224B0775003ED11A /* CertificateVC.swift */,
+				46FF2282224B07C0003ED11A /* ProfileImageVC.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +438,7 @@
 			files = (
 				46707B24224087F400C00D39 /* TermsAndConditionsVC.swift in Sources */,
 				463D021A224925B5009A55D2 /* Worker.swift in Sources */,
+				46FF2283224B07C0003ED11A /* ProfileImageVC.swift in Sources */,
 				46F3850F2242D9EE00E661B8 /* CategoryCell.swift in Sources */,
 				46EBD79522417CE5003BC6DA /* DashboardVC.swift in Sources */,
 				46707B0E22407ED000C00D39 /* ViewController.swift in Sources */,
@@ -421,7 +448,9 @@
 				46707B26224087FF00C00D39 /* LoginVC.swift in Sources */,
 				46EBD79922417D99003BC6DA /* MenuVC.swift in Sources */,
 				46707B282240880C00C00D39 /* SignUpVC.swift in Sources */,
+				46FF227D224B0768003ED11A /* IdentificationVC.swift in Sources */,
 				46EBD7A1224187B4003BC6DA /* CreateCategoriesVC.swift in Sources */,
+				46FF2281224B07AC003ED11A /* SelectCategoryVC.swift in Sources */,
 				46EBD7A3224191C5003BC6DA /* ViewControllerExtensions.swift in Sources */,
 				46EBD79722417CFC003BC6DA /* CategoriesVC.swift in Sources */,
 				46E06B0022441EAA00A36194 /* OfferentCell.swift in Sources */,
@@ -430,9 +459,12 @@
 				46EBD79F2241816C003BC6DA /* AdminCategoryCell.swift in Sources */,
 				46EBD79B22417FE1003BC6DA /* Category.swift in Sources */,
 				464720D322414EFD0067A0E3 /* ActionButton.swift in Sources */,
+				463D021E224946B5009A55D2 /* Applicant.swift in Sources */,
 				466F745D2246EFFF00C75F6D /* User.swift in Sources */,
 				46EBD7A522419740003BC6DA /* AdminCategory.swift in Sources */,
 				46EBD78F22417B05003BC6DA /* FirebaseUtilities.swift in Sources */,
+				46FF227F224B0775003ED11A /* CertificateVC.swift in Sources */,
+				463D021C224941B9009A55D2 /* OfferentApplicationVC.swift in Sources */,
 				464720D6224158F70067A0E3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

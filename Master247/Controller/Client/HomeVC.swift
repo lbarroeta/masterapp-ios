@@ -74,14 +74,20 @@ class HomeVC: UIViewController {
         Firestore.firestore().collection("users").document(userID.uid).getDocument { (snapshot, error) in
             if let data = snapshot?.data() {
                 guard let isAdmin = data["isAdmin"] as? Bool else { return }
+                guard let isApproved = data["isApproved"] as? Bool else { return }
                 if isAdmin {
                     self.applyButton.isHidden = true
-                } else {
+                } else if !isAdmin && !isApproved {
                     self.applyButton.isHidden = false
+                    self.applyButton.setTitle("Tu solicitud esta en revisión", for: .normal)
+                    self.applyButton.isUserInteractionEnabled = false
+                } else if isApproved {
+                    self.applyButton.isHidden = true
                 }
             }
         }
     }
+    
     
 }
 
