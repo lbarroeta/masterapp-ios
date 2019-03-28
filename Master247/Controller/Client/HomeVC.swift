@@ -37,6 +37,7 @@ class HomeVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         listener.remove()
+        users.removeAll()
         categories.removeAll()
         tableView.reloadData()
     }
@@ -71,20 +72,30 @@ class HomeVC: UIViewController {
     
     func userRoleListener() {
         guard let userID = Auth.auth().currentUser else { return }
-        Firestore.firestore().collection("users").document(userID.uid).getDocument { (snapshot, error) in
+        
+        Firestore.firestore().collection("users").document(userID.uid).addSnapshotListener { (snapshot, error) in
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                return
+            }
+            
             if let data = snapshot?.data() {
-                guard let isAdmin = data["isAdmin"] as? Bool else { return }
                 guard let isApproved = data["isApproved"] as? Bool else { return }
-                if isAdmin {
+                let role = data["role"] as? String
+                if role == "admin" {
                     self.applyButton.isHidden = true
-                } else if !isAdmin && !isApproved {
+                } else if role == "client" && !isApproved {
                     self.applyButton.isHidden = false
-                    self.applyButton.setTitle("Tu solicitud esta en revisión", for: .normal)
-                    self.applyButton.isUserInteractionEnabled = false
-                } else if isApproved {
-                    self.applyButton.isHidden = true
+                    self.applyButton.setTitle("¿DESEAS GENERAR INGRESOS?", for: .normal)
+                } else if role == "offerent" && isApproved {
+                    self.applyButton.isHidden = false
+                    self.applyButton.setTitle("PANEL DE OFERENTES", for: .normal)
+                } else if role == "offerent" && !isApproved {
+                    self.applyButton.isHidden = false
+                    self.applyButton.setTitle("TU SOLICITUD ESTA EN REVISIÓN", for: .normal)
                 }
             }
+            
         }
     }
     
@@ -143,9 +154,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.ToOfferents {
             if let destination = segue.destination as? OfferentsVC {
-                destination.category = selectedCategory
+                destination.selectedCategory = selectedCategory
             }
         }
     }
+    
     
 }

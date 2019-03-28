@@ -67,7 +67,8 @@ class ProfileImageVC: UIViewController {
         var userData = [String : Any]()
         userData = [
             "profileImageURL": url,
-            "isApproved": false
+            "isApproved": false,
+            "role": "offerent",
         ]
         
         docRef = Firestore.firestore().collection("users").document(user.uid)

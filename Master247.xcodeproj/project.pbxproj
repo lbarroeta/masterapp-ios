@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		463D021A224925B5009A55D2 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D0219224925B5009A55D2 /* Worker.swift */; };
-		463D021C224941B9009A55D2 /* OfferentApplicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D021B224941B9009A55D2 /* OfferentApplicationVC.swift */; };
 		463D021E224946B5009A55D2 /* Applicant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D021D224946B5009A55D2 /* Applicant.swift */; };
 		464720D322414EFD0067A0E3 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464720D222414EFD0067A0E3 /* ActionButton.swift */; };
 		464720D6224158F70067A0E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464720D5224158F70067A0E3 /* Constants.swift */; };
@@ -25,8 +23,12 @@
 		46707B2A2240896500C00D39 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46707B292240896500C00D39 /* ForgotPasswordVC.swift */; };
 		46707B2D22408A8D00C00D39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46707B2C22408A8D00C00D39 /* GoogleService-Info.plist */; };
 		469893DA2242D4C1006CBCFA /* ClientStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469893D92242D4C1006CBCFA /* ClientStoryboard.storyboard */; };
-		46E06B0022441EAA00A36194 /* OfferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E06AFF22441EAA00A36194 /* OfferentCell.swift */; };
-		46E06B042244229000A36194 /* OfferentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E06B032244229000A36194 /* OfferentsVC.swift */; };
+		46A78199224C17F900DE448B /* ApplicantCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A78198224C17F900DE448B /* ApplicantCategoryCell.swift */; };
+		46A7819B224C1B7A00DE448B /* ApplicantCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7819A224C1B7A00DE448B /* ApplicantCategory.swift */; };
+		46A781A3224C5D8500DE448B /* OfferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A781A2224C5D8500DE448B /* OfferentCell.swift */; };
+		46A781A5224C5E1900DE448B /* OfferentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A781A4224C5E1900DE448B /* OfferentsVC.swift */; };
+		46A781A7224C5F0E00DE448B /* Offerent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A781A6224C5F0E00DE448B /* Offerent.swift */; };
+		46A781A9224C742100DE448B /* ContractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A781A8224C742100DE448B /* ContractVC.swift */; };
 		46EBD78F22417B05003BC6DA /* FirebaseUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EBD78E22417B05003BC6DA /* FirebaseUtilities.swift */; };
 		46EBD79122417BEB003BC6DA /* AdminStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EBD79022417BEB003BC6DA /* AdminStoryboard.storyboard */; };
 		46EBD79522417CE5003BC6DA /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EBD79422417CE5003BC6DA /* DashboardVC.swift */; };
@@ -49,8 +51,6 @@
 
 /* Begin PBXFileReference section */
 		1770DD32156B05D6C8981249 /* Pods-Master247.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master247.release.xcconfig"; path = "Target Support Files/Pods-Master247/Pods-Master247.release.xcconfig"; sourceTree = "<group>"; };
-		463D0219224925B5009A55D2 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
-		463D021B224941B9009A55D2 /* OfferentApplicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferentApplicationVC.swift; sourceTree = "<group>"; };
 		463D021D224946B5009A55D2 /* Applicant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicant.swift; sourceTree = "<group>"; };
 		464720D222414EFD0067A0E3 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		464720D5224158F70067A0E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -69,8 +69,12 @@
 		46707B292240896500C00D39 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		46707B2C22408A8D00C00D39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		469893D92242D4C1006CBCFA /* ClientStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClientStoryboard.storyboard; sourceTree = "<group>"; };
-		46E06AFF22441EAA00A36194 /* OfferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferentCell.swift; sourceTree = "<group>"; };
-		46E06B032244229000A36194 /* OfferentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferentsVC.swift; sourceTree = "<group>"; };
+		46A78198224C17F900DE448B /* ApplicantCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantCategoryCell.swift; sourceTree = "<group>"; };
+		46A7819A224C1B7A00DE448B /* ApplicantCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantCategory.swift; sourceTree = "<group>"; };
+		46A781A2224C5D8500DE448B /* OfferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferentCell.swift; sourceTree = "<group>"; };
+		46A781A4224C5E1900DE448B /* OfferentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferentsVC.swift; sourceTree = "<group>"; };
+		46A781A6224C5F0E00DE448B /* Offerent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offerent.swift; sourceTree = "<group>"; };
+		46A781A8224C742100DE448B /* ContractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractVC.swift; sourceTree = "<group>"; };
 		46EBD78E22417B05003BC6DA /* FirebaseUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtilities.swift; sourceTree = "<group>"; };
 		46EBD79022417BEB003BC6DA /* AdminStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminStoryboard.storyboard; sourceTree = "<group>"; };
 		46EBD79422417CE5003BC6DA /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
@@ -173,8 +177,9 @@
 				46EBD7A422419740003BC6DA /* AdminCategory.swift */,
 				46EBD79A22417FE1003BC6DA /* Category.swift */,
 				466F745C2246EFFF00C75F6D /* User.swift */,
-				463D0219224925B5009A55D2 /* Worker.swift */,
 				463D021D224946B5009A55D2 /* Applicant.swift */,
+				46A7819A224C1B7A00DE448B /* ApplicantCategory.swift */,
+				46A781A6224C5F0E00DE448B /* Offerent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,9 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				46F3850B2242D5CB00E661B8 /* HomeVC.swift */,
-				46E06B032244229000A36194 /* OfferentsVC.swift */,
-				463D021B224941B9009A55D2 /* OfferentApplicationVC.swift */,
 				46F385102242DDDB00E661B8 /* ClientMenuVC.swift */,
+				46A781A4224C5E1900DE448B /* OfferentsVC.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -272,7 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				46F3850E2242D9EE00E661B8 /* CategoryCell.swift */,
-				46E06AFF22441EAA00A36194 /* OfferentCell.swift */,
+				46A78198224C17F900DE448B /* ApplicantCategoryCell.swift */,
+				46A781A2224C5D8500DE448B /* OfferentCell.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 		46FF2279224B06B7003ED11A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				46A781A8224C742100DE448B /* ContractVC.swift */,
 				46FF2280224B07AC003ED11A /* SelectCategoryVC.swift */,
 				46FF227C224B0768003ED11A /* IdentificationVC.swift */,
 				46FF227E224B0775003ED11A /* CertificateVC.swift */,
@@ -437,8 +443,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46707B24224087F400C00D39 /* TermsAndConditionsVC.swift in Sources */,
-				463D021A224925B5009A55D2 /* Worker.swift in Sources */,
 				46FF2283224B07C0003ED11A /* ProfileImageVC.swift in Sources */,
+				46A781A9224C742100DE448B /* ContractVC.swift in Sources */,
 				46F3850F2242D9EE00E661B8 /* CategoryCell.swift in Sources */,
 				46EBD79522417CE5003BC6DA /* DashboardVC.swift in Sources */,
 				46707B0E22407ED000C00D39 /* ViewController.swift in Sources */,
@@ -447,24 +453,26 @@
 				46F385112242DDDB00E661B8 /* ClientMenuVC.swift in Sources */,
 				46707B26224087FF00C00D39 /* LoginVC.swift in Sources */,
 				46EBD79922417D99003BC6DA /* MenuVC.swift in Sources */,
+				46A781A7224C5F0E00DE448B /* Offerent.swift in Sources */,
 				46707B282240880C00C00D39 /* SignUpVC.swift in Sources */,
+				46A7819B224C1B7A00DE448B /* ApplicantCategory.swift in Sources */,
 				46FF227D224B0768003ED11A /* IdentificationVC.swift in Sources */,
 				46EBD7A1224187B4003BC6DA /* CreateCategoriesVC.swift in Sources */,
 				46FF2281224B07AC003ED11A /* SelectCategoryVC.swift in Sources */,
 				46EBD7A3224191C5003BC6DA /* ViewControllerExtensions.swift in Sources */,
 				46EBD79722417CFC003BC6DA /* CategoriesVC.swift in Sources */,
-				46E06B0022441EAA00A36194 /* OfferentCell.swift in Sources */,
 				46707B0C22407ED000C00D39 /* AppDelegate.swift in Sources */,
-				46E06B042244229000A36194 /* OfferentsVC.swift in Sources */,
 				46EBD79F2241816C003BC6DA /* AdminCategoryCell.swift in Sources */,
 				46EBD79B22417FE1003BC6DA /* Category.swift in Sources */,
 				464720D322414EFD0067A0E3 /* ActionButton.swift in Sources */,
 				463D021E224946B5009A55D2 /* Applicant.swift in Sources */,
 				466F745D2246EFFF00C75F6D /* User.swift in Sources */,
+				46A781A5224C5E1900DE448B /* OfferentsVC.swift in Sources */,
 				46EBD7A522419740003BC6DA /* AdminCategory.swift in Sources */,
+				46A78199224C17F900DE448B /* ApplicantCategoryCell.swift in Sources */,
 				46EBD78F22417B05003BC6DA /* FirebaseUtilities.swift in Sources */,
 				46FF227F224B0775003ED11A /* CertificateVC.swift in Sources */,
-				463D021C224941B9009A55D2 /* OfferentApplicationVC.swift in Sources */,
+				46A781A3224C5D8500DE448B /* OfferentCell.swift in Sources */,
 				464720D6224158F70067A0E3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

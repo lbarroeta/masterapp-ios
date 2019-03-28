@@ -34,6 +34,7 @@ struct CellIdentifiers {
     static let ClientCategoryCell = "ClientCategoryCell"
     static let OfferentsCell = "OfferentsCell"
     static let CategoryCell = "CategoryCell"
+    static let ApplicantCategoryCell = "ApplicantCategoryCell"
 }
 
 struct AppImages {

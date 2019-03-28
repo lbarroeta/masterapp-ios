@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -383,11 +383,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddButton" width="384" height="384"/>
-        <image name="BackArrowWhite" width="384" height="384"/>
-        <image name="UploadImageIcon" width="247.40939331054688" height="247.40939331054688"/>
-        <image name="WhiteConfigIcon" width="192" height="192"/>
-        <image name="electrician" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="AddButton" width="480" height="480"/>
+        <image name="BackArrowWhite" width="512" height="512"/>
+        <image name="UploadImageIcon" width="512" height="512"/>
+        <image name="WhiteConfigIcon" width="240" height="240"/>
+        <image name="electrician" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MAP-bS-T2N"/>

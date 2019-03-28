@@ -19,4 +19,8 @@ extension Firestore {
         return collection("users")
     }
     
+    var applicantCategories: Query {
+        return collection("categories").order(by: "name", descending: false).whereField("isActive", isEqualTo: true)
+    }
+    
 }

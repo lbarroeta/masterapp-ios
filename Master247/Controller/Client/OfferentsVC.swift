@@ -2,7 +2,7 @@
 //  OfferentsVC.swift
 //  Master247
 //
-//  Created by Leonardo Barroeta on 3/21/19.
+//  Created by Leonardo Barroeta on 3/27/19.
 //  Copyright © 2019 Kodim. All rights reserved.
 //
 
@@ -13,32 +13,24 @@ class OfferentsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var workers = [Worker]()
-    var category: Category!
+    var selectedCategory: Category!
+    var offerents = [Offerent]()
     var database: Firestore!
     var listener: ListenerRegistration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpTableView()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        workersListener()
+        offerentsListener()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         listener.remove()
-        
+        offerents.removeAll()
         tableView.reloadData()
-    }
-    
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     func setUpTableView() {
@@ -46,72 +38,83 @@ class OfferentsVC: UIViewController {
         tableView.dataSource = self
     }
     
-    func workersListener() {
-
-        listener = Firestore.firestore().workers.whereField("category", arrayContains: category.id).order(by: "timestamp", descending: false).addSnapshotListener({ (snapshot, error) in
+    
+    func offerentsListener() {
+        listener = Firestore.firestore().collection("users").whereField("categories", arrayContains: selectedCategory.name).whereField("isApproved", isEqualTo: true).addSnapshotListener({ (snapshot, error) in
             if let error = error {
                 debugPrint(error.localizedDescription)
                 return
             }
-
+            
             snapshot?.documentChanges.forEach({ (change) in
                 let data = change.document.data()
-                let worker = Worker.init(data: data)
-
+                let offerent = Offerent.init(data: data)
+                
                 switch change.type {
                 case .added:
-                    self.onCategoryAdded(change: change, worker: worker)
+                    self.onOfferentAdded(change: change, offerent: offerent)
                 case .modified:
-                    self.onCategoryModified(change: change, worker: worker)
+                    self.onOfferentModified(change: change, offerent: offerent)
                 case .removed:
-                    self.onCategoryRemoved(change: change)
+                    self.onOfferentRemoved(change: change)
                 }
+                
             })
         })
-
+        
     }
+    
+
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 }
 
 extension OfferentsVC: UITableViewDelegate, UITableViewDataSource {
-    
-    func onCategoryAdded(change: DocumentChange, worker: Worker) {
+
+    func onOfferentAdded(change: DocumentChange, offerent: Offerent) {
         let newIndex = Int(change.newIndex)
-        workers.insert(worker, at: newIndex)
+        offerents.insert(offerent, at: newIndex)
         tableView.insertRows(at: [IndexPath.init(item: newIndex, section: 0)], with: .automatic)
     }
-
-    func onCategoryModified(change: DocumentChange, worker: Worker) {
+    
+    func onOfferentModified(change: DocumentChange, offerent: Offerent) {
         if change.newIndex == change.oldIndex {
             let index = Int(change.newIndex)
-            workers[index] = worker
+            offerents[index] = offerent
             tableView.reloadRows(at: [IndexPath(item: index, section: 0)], with: .automatic)
         } else {
             let oldIndex = Int(change.oldIndex)
             let newIndex = Int(change.newIndex)
-            workers.remove(at: oldIndex)
-            workers.insert(worker, at: newIndex)
+            offerents.remove(at: oldIndex)
+            offerents.insert(offerent, at: newIndex)
+            
             tableView.moveRow(at: IndexPath(item: oldIndex, section: 0), to: IndexPath(item: newIndex, section: 0))
         }
     }
-
-    func onCategoryRemoved(change: DocumentChange) {
+    
+    func onOfferentRemoved(change: DocumentChange) {
         let oldIndex = Int(change.oldIndex)
-        workers.remove(at: oldIndex)
+        offerents.remove(at: oldIndex)
         tableView.deleteRows(at: [IndexPath.init(item: oldIndex, section: 0)], with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return workers.count
+        return offerents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.OfferentsCell, for: indexPath) as? OfferentCell {
-            
+            cell.configureCell(offerents: offerents[indexPath.item])
             return cell
         }
         return UITableViewCell()
     }
+    
+    
     
     
 }

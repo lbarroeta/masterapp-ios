@@ -128,25 +128,126 @@
                     <connections>
                         <outlet property="applyButton" destination="02W-MD-UdJ" id="b76-xT-aMD"/>
                         <outlet property="tableView" destination="Ff3-PG-Oob" id="VCb-Pv-hTJ"/>
-                        <segue destination="0HJ-Ht-PM6" kind="show" identifier="ToOfferentsVC" id="JyE-Tt-Vrr"/>
+                        <segue destination="Xcc-rM-0t2" kind="show" identifier="ToOfferentsVC" id="3gu-ax-g9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rn0-ag-eKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-178.40000000000001" y="135.96059113300493"/>
         </scene>
-        <!--Select CategoryVC-->
+        <!--OfferentsVC-->
+        <scene sceneID="6UL-NY-A2C">
+            <objects>
+                <viewController id="Xcc-rM-0t2" customClass="OfferentsVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rvJ-rF-Aho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgb-Yg-kSB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4r-uG-JsD">
+                                        <rect key="frame" x="147.33333333333334" y="70" width="80.333333333333343" height="24.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiJ-as-emT">
+                                        <rect key="frame" x="20" y="72.333333333333329" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="BQt-ha-pSI"/>
+                                            <constraint firstAttribute="height" constant="20" id="OHL-cj-7mA"/>
+                                        </constraints>
+                                        <state key="normal" image="BackArrowWhite"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Xcc-rM-0t2" eventType="touchUpInside" id="35c-1P-zKo"/>
+                                            <action selector="backButtonPressed:" destination="tYN-Qu-IIv" eventType="touchUpInside" id="hw3-ck-FYz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwd-6g-7xa">
+                                        <rect key="frame" x="325" y="67.333333333333329" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8nP-a5-zVO"/>
+                                            <constraint firstAttribute="width" constant="30" id="zhr-66-6fW"/>
+                                        </constraints>
+                                        <state key="normal" image="WhiteConfigIcon"/>
+                                        <connections>
+                                            <segue destination="tYN-Qu-IIv" kind="show" id="0uj-W8-p1p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c4r-uG-JsD" firstAttribute="top" secondItem="Pgb-Yg-kSB" secondAttribute="top" constant="70" id="3cH-2W-IrQ"/>
+                                    <constraint firstItem="Rwd-6g-7xa" firstAttribute="centerY" secondItem="c4r-uG-JsD" secondAttribute="centerY" id="8iK-hb-5Tn"/>
+                                    <constraint firstAttribute="height" constant="120" id="DiC-r8-j7J"/>
+                                    <constraint firstItem="jiJ-as-emT" firstAttribute="centerY" secondItem="c4r-uG-JsD" secondAttribute="centerY" id="KRf-ed-GiE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rwd-6g-7xa" secondAttribute="trailing" constant="20" id="nX4-Vg-3zj"/>
+                                    <constraint firstItem="jiJ-as-emT" firstAttribute="leading" secondItem="Pgb-Yg-kSB" secondAttribute="leading" constant="20" id="xCH-Sn-4Db"/>
+                                    <constraint firstItem="c4r-uG-JsD" firstAttribute="centerX" secondItem="Pgb-Yg-kSB" secondAttribute="centerX" id="yFX-FS-BPg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dr6-Du-bVr">
+                                <rect key="frame" x="0.0" y="120" width="375" height="658"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferentsCell" rowHeight="120" id="h45-IC-KAs" customClass="OfferentCell" customModule="Master247" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h45-IC-KAs" id="xCG-bG-MRc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del oferente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-Ay-pah">
+                                                    <rect key="frame" x="108.66666666666669" y="49.333333333333336" width="158" height="21.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zmj-Ay-pah" firstAttribute="centerX" secondItem="xCG-bG-MRc" secondAttribute="centerX" id="HW4-Bi-YrX"/>
+                                                <constraint firstItem="zmj-Ay-pah" firstAttribute="centerY" secondItem="xCG-bG-MRc" secondAttribute="centerY" id="Mpk-ni-7iw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="offerentNameAndLastnameLabel" destination="zmj-Ay-pah" id="37e-Tx-FNS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0nU-0x-e5d" firstAttribute="bottom" secondItem="dr6-Du-bVr" secondAttribute="bottom" id="PG1-Iw-KEC"/>
+                            <constraint firstItem="0nU-0x-e5d" firstAttribute="trailing" secondItem="dr6-Du-bVr" secondAttribute="trailing" id="Z5g-4x-4AC"/>
+                            <constraint firstItem="Pgb-Yg-kSB" firstAttribute="top" secondItem="rvJ-rF-Aho" secondAttribute="top" id="bQf-Qm-pRo"/>
+                            <constraint firstItem="Pgb-Yg-kSB" firstAttribute="trailing" secondItem="0nU-0x-e5d" secondAttribute="trailing" id="e5S-a4-lfj"/>
+                            <constraint firstItem="dr6-Du-bVr" firstAttribute="leading" secondItem="0nU-0x-e5d" secondAttribute="leading" id="tjJ-7C-StP"/>
+                            <constraint firstItem="Pgb-Yg-kSB" firstAttribute="leading" secondItem="0nU-0x-e5d" secondAttribute="leading" id="u5Y-xs-Agz"/>
+                            <constraint firstItem="dr6-Du-bVr" firstAttribute="top" secondItem="Pgb-Yg-kSB" secondAttribute="bottom" id="xHd-of-xYK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0nU-0x-e5d"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dr6-Du-bVr" id="Et1-eX-MlA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJx-px-Ix9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.79999999999995" y="135.96059113300493"/>
+        </scene>
+        <!--ContractVC-->
         <scene sceneID="OdT-mY-Wm1">
             <objects>
-                <viewController id="PYI-Po-Ll1" customClass="SelectCategoryVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PYI-Po-Ll1" customClass="ContractVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvb-IO-Htw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roc-2y-wWP">
-                                <rect key="frame" x="20" y="134" width="335" height="104"/>
-                                <string key="text">A continuación te solicitaremos cierta documentación, la misma sera validada para aprobar tu solicitud y verificar tu identidad.</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINOS Y CONDICIONES PARA PRESTADORES DE SERVICIOS APP MASTER247" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roc-2y-wWP">
+                                <rect key="frame" x="20" y="134" width="335" height="74"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -158,7 +259,7 @@
                                 </constraints>
                                 <state key="normal" image="BackArrow"/>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="PYI-Po-Ll1" eventType="touchUpInside" id="5Sz-fS-I9w"/>
+                                    <action selector="backButtonPressed:" destination="PYI-Po-Ll1" eventType="touchUpInside" id="klB-Bd-eMR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8H-qj-r3E" customClass="ActionButton" customModule="Master247" customModuleProvider="target">
@@ -172,16 +273,143 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vcA-AN-Kij" kind="show" id="W79-PI-mbM"/>
+                                    <segue destination="WRG-7o-PwT" kind="show" id="ZiE-2K-Xol"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="7tG-Jd-vI5">
+                                <rect key="frame" x="20" y="218" width="335" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">1.	REGLAMENTO DE CARGA DE INFORMACIÓN Y USO DEL PORTAL MÓVIL (PERSONAS NATURALES Y PERSONAS JURÍDICAS)
+
+El presente documento establece las condiciones mediante las cuales se regirá el uso de la aplicación móvil: Master247 APP Ecuador (en adelante la aplicación), la cual es operada por la Organización Master247.org, Master247.app, Master247.services, Ecuador.
+
+La aplicación Master247 funcionará como un nuevo canal para la oferta de servicios enmarcados en la categoría Hogar / Oficina, con el objeto de facilitar a los Clientes / Usuarios el acceso, la búsqueda, la negociación y contratación de servicios requeridos para su Hogar u Oficina.
+ 
+El OFERENTE DE LOS SERVICIOS se compromete a leer los términos y condiciones aquí establecidas, previamente a la descarga de la aplicación, y carga de datos, por tanto, en caso de realizar la instalación se entiende que cuenta con el conocimiento integral de este documento y la consecuente aceptación de la totalidad de sus estipulaciones.
+
+El OFERENTE DE LOS SERVICIOS reconoce que el ingreso de su información personal o empresarial, y los datos que contiene la aplicación a su disposición respecto a los servicios activos, la realizan de manera voluntaria, quienes optan por acceder a esta aplicación en Ecuador o desde fuera del territorio nacional, lo hacen por iniciativa propia y son los únicos responsables del cumplimiento de las leyes locales, en la medida en que dichas leyes sean aplicables en su correspondiente país. En caso de que se acceda por parte de menores de edad, Master247 procederá con la no aprobación de la publicación. 
+
+2.	ALCANCE Y USO
+
+El OFERENTE DE LOS SERVICIOS dentro de la aplicación entiende y acepta que no obstante es operada por Master247.org, Master247.app, Master247.services, Ecuador, la información contenida en la misma será la referente a los oferentes de los servicios, quienes cargarán la información personal y profesional en las diferentes categorías que ha definido la aplicación, por tanto, las funcionalidades ofrecidas por la aplicación serán entregadas por cada oferente del servicio de acuerdo con su vinculación. La aplicación Master247 únicamente actuara como un canal adicional a los ya tradicionalmente utilizados por los usuarios, de contacto y comunicación entre los oferentes de los servicios y los usuarios de los mismos.
+  
+En la aplicación se pondrá a disposición del CLIENTE información y/o permitirá la realización de las transacciones determinadas o habilitadas por Master247 para cada servicio en particular. Master247 podrá adicionar, modificar o eliminar las funcionalidades en cualquier momento, lo cual acepta el OFERENTE DE LOS SERVICIOS mediante la instalación de la aplicación. En todo caso, al momento de realizar dichas modificaciones se notificarán a los oferentes de los servicios a través de la misma aplicación móvil una vez inicie sesión. 
+Los tiempos de respuesta, trámites, costos y demás solicitudes efectuadas por el usuario mediante la aplicación procesada de conformidad con las especificaciones de cada servicio activo serán de exclusiva responsabilidad de LOS OFERENTES DE LOS SERVICIOS inscritos en la aplicación.
+LOS OFERENTES DE LOS SERVICIOS aceptan y autorizan que los registros electrónicos de las actividades mencionadas, que realicen en la aplicación constituyen plena prueba de los mismos.
+
+3.	REQUISITOS PARA USO
+
+LOS OFERENTES DE LOS SERVICIOS deberán contar con un dispositivo móvil inteligente (Smartphone) o Tableta con sistema operativo Android o IOS, cualquiera de estos con acceso a internet, ambos seguros y confiables. Master247, no será responsable por la seguridad de los equipos Smartphone propiedad de los Oferentes de Los Servicios utilizados para el acceso al canal, ni por la disponibilidad del servicio en los dispositivos en los cuales se descargue la aplicación.
+
+En la forma permitida por la ley, los materiales de la aplicación se suministran sin garantía de ningún género, expresa o implícita, incluyendo sin limitación las garantías de calidad satisfactoria, comerciabilidad, adecuación para un fin particular o no infracción, por tanto, Master247 no garantiza el funcionamiento adecuado en los distintos sistemas operativos o dispositivos en los cuales se haga uso de la aplicación.
+
+Para acceder al portal, EL OFERENTE DE LOS SERVICIOS contará con Usuario y Contraseña, que los identifica en su relación con MASTER247, los cuales serán los mismos utilizados en el PORTAL WEB. Adicional a lo anterior se requerirá a EL OFERENTE DE LOS SERVICIOS, registrar preguntas de seguridad, las cuales serán solicitadas al momento de intentar ingresar al portal, sólo cuando el oferente ingrese desde un equipo registrado no se solicitará responder las preguntas definidas con anterioridad.
+
+
+4.	OBLIGACIONES DE LOS OFERENTES DE LOS SERVICIOS
+
+El OFERENTE DE LOS SERVICIOS se obliga a usar la aplicación y los contenidos encontrados en ella de una manera diligente, correcta, lícita y en especial, se compromete a NO realizar las conductas descritas a continuación: 
+
+•	(a) Utilizar los contenidos de forma, con fines o efectos contrarios a la ley, a la moral y a las buenas costumbres generalmente aceptadas o al orden público;
+
+•	(b) Reproducir, copiar, representar, utilizar, distribuir, transformar o modificar los contenidos de la aplicación, por cualquier procedimiento o sobre cualquier soporte, total o parcial, o permitir el acceso del público a través de cualquier modalidad de comunicación pública;
+
+•	(c) Utilizar los contenidos de cualquier manera que entrañen un riesgo de daño o inutilización de la aplicación o de los contenidos o de terceros;
+
+•	(d) Suprimir, eludir o manipular el derecho de autor y demás datos identificativos de los derechos de autor incorporados a los contenidos, así como los dispositivos técnicos de protección, o cualesquiera mecanismos de información que pudieren tener los contenidos;
+
+•	(e) Emplear los contenidos y, en particular, la información de cualquier clase obtenida a través de la aplicación para distribuir, transmitir, remitir, modificar, rehusar o reportar la publicidad o los contenidos de esta con fines de venta directa o con cualquier otra clase de finalidad comercial, mensajes no solicitados dirigidos a una pluralidad de personas con independencia de su finalidad, así como comercializar o divulgar de cualquier modo dicha información;
+
+•	(f) No permitir que terceros ajenos a usted usen la aplicación móvil con su clave;
+
+•	g) Utilizar la aplicación y los contenidos con fines lícitos y/o ilícitos, contrarios a lo establecido en estos Términos y Condiciones, o al uso mismo de la aplicación, que sean lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar o deteriorar la aplicación y los contenidos o impedir la normal utilización o disfrute de esta y de los contenidos por parte de los usuarios.
+
+5.	PROPIEDAD INTELECTUAL
+
+Todo el material informático, gráfico, publicitario, fotográfico, de multimedia, audiovisual y de diseño, así como todos los contenidos, textos y bases de datos puestos a su disposición en esta aplicación están protegidos por derechos de autor y/o propiedad industrial cuyo titular es Master247 Ecuador, o sus compañías filiales, vinculadas o subsidiarias, en algunos casos, de terceros que han autorizado su uso o explotación. Igualmente, el uso en la aplicación de algunos materiales de propiedad de terceros se encuentra expresamente autorizado por la ley o por dichos terceros. Todos los contenidos en la aplicación están protegidos por las normas sobre derecho de autor y por todas las normas nacionales e internacionales que le sean aplicables.
+
+Exceptuando lo expresamente estipulado en estos Términos y Condiciones, queda prohibido todo acto de copia, reproducción, modificación, creación de trabajos derivados, venta o distribución, exhibición de los contenidos de esta aplicación, de manera o por medio alguno, incluyendo, más no limitado a, medios electrónicos, mecánicos, de fotocopiado, de grabación o de cualquier otra índole, sin el permiso previo y por escrito de Master247 Ecuador o del titular de los respectivos derechos.
+
+En ningún caso estos Términos y Condiciones confieren derechos, licencias ni autorizaciones para realizar los actos anteriormente prohibidos. Cualquier uso no autorizado de los contenidos constituirá una violación del presente documento y a las normas vigentes sobre derechos de autor, a las normas vigentes nacionales e internacionales sobre Propiedad Industrial, y a cualquier otra que sea aplicable.
+
+6.	LICENCIA PARA COPIAR PARA USO PERSONAL
+
+Usted podrá leer, visualizar, imprimir y descargar el material de sus productos.
+Ninguna parte de la aplicación podrá ser reproducida o transmitida o almacenada en otro sitio web o en otra forma de sistema de recuperación electrónico.
+Ya sea que se reconozca específicamente o no, las marcas comerciales, las marcas de servicio y los logos visualizados en esta aplicación pertenecen a la organización Master247.org, Master247.app, Master247.services, Ecuador, sus socios promocionales u otros terceros.
+
+Master247 no interfiere en acuerdos de precios, detalles de trabajo, especificaciones técnicas, no toma decisiones, ni garantiza las relaciones que los OFERENTES DE LOS SERVICIOS lleguen a sostener o las vinculaciones con terceros que pauten (Clientes) y/o promocionen sus servicios y productos. Estas marcas de terceros se utilizan solamente para identificar los servicios y productos de sus respectivos propietarios y el patrocinio o el aval por parte de Master247 no se deben inferir con el uso de estas marcas comerciales.
+
+7.	INTEGRACIÓN CON OTRAS APLICACIONES
+
+Los links de Facebook®, Instagram®, twitter® en esta aplicación pueden mostrar contenido que no están bajo el control de Master247.
+
+Aunque esta aplicación de Master247 trata de suministrar links solamente a sitios y aplicaciones de terceros que cumplan con las leyes y regulaciones aplicables y las normas de Master247 Ecuador, el Usuario debe entender que de Master247 Ecuador no tiene control sobre la naturaleza y el contenido de esos sitios y no está recomendando estos sitios, la información que contienen ni los productos o servicios de terceros.
+Master247 Ecuador no acepta responsabilidad por el contenido del sitio de un tercero con el cual existe un link de hipertexto y no ofrece garantía (explícita o implícita) en cuanto al contenido de la información en esos sitios, ya que no recomienda estos sitios.
+Usted debe verificar las secciones de términos y condiciones, política legal y de privacidad de algunos otros sitios de Master247 o de un tercero con los cuales se enlaza.
+
+Master247 no asume ninguna responsabilidad por pérdida directa, indirecta o consecuencial por el uso de un sitio de un tercero.
+
+8.	USO DE INFORMACIÓN Y PRIVACIDAD
+
+Con la descarga de la APP usted acepta y autoriza que Master247 Ecuador, utilice sus datos en calidad de responsable del tratamiento para fines derivados de la ejecución de la APP. de Master247 Ecuador informa que podrá ejercer sus derechos a conocer, actualizar, rectificar o negar la inscripción solicitada y suprimir su información personal; así como el derecho a revocar el consentimiento otorgado para el tratamiento de datos personales, observando nuestra política de tratamiento de información disponible en: www.master247.org; o a través de usuarios@master247.org, siendo voluntario responder preguntas sobre información sensible o de menores de edad.
+Master247 Ecuador podrá y deberá dar a conocer, transferir y/o trasmitir sus datos personales dentro y fuera del país a cualquier empresa miembro de la Organización Master247.org, Master247.app, Master247.services, Ecuador, así como a terceros a consecuencia de un contrato (Cliente), ley o vínculo LÍCITO que así lo requiera, para todo lo anterior otorgo mi autorización expresa e inequívoca.
+
+De conformidad a lo anterior autoriza el tratamiento de su información en los términos señalados, y transfiere a Master247 de manera total, y sin limitación mis derechos de imagen y patrimoniales de autor, de manera voluntaria, previa, explicita, informada e inequívoca.
+
+9.	RESPONSABILIDAD DE MASTER247
+
+MASTER247 procurará garantizar disponibilidad, continuidad o buen funcionamiento de la aplicación. Master247 podrá bloquear, interrumpir o restringir el acceso a esta cuando lo considere necesario para el mejoramiento de la aplicación o por dada de baja de la misma.
+Se recomienda a los OFERENTES DE LOS SERVICIOS tomar medidas adecuadas y actuar diligentemente al momento de acceder a la aplicación, como por ejemplo, contar con programas de protección, antivirus, para manejo de malware, spyware y herramientas similares.
+
+MASTER247 no será responsable por: a) Fuerza mayor o caso fortuito; b) Por la pérdida, extravío o hurto de su dispositivo móvil que implique el acceso de terceros a la aplicación móvil; c) Por errores en la digitación o accesos por parte de los Oferentes de los Servicios; d) Por los perjuicios, lucro cesante, daño emergente, morales, y en general sumas a cargo de Master247, por los servicios prestados por los oferentes de los servicios, por los valores del servicio y pagos acordados entre las partes, así como retrasos, no cumplimientos, no procesamiento de información o suspensión del servicio del operador móvil o daños en los dispositivos móviles. 
+
+Los oferentes de los Servicios podrán enfrentar demandas judiciales por parte de los Clientes / Usuarios de la Aplicación, por información fraudulenta, por prestación de mal servicio, por discrepancias en el costos de prestación de servicios, por robo, por mala atención, etc., causales que motivarán la mala calificación por parte de los usuarios y comentarios negativos al Oferente de Los Servicios, lo que ocasionara el bloqueo o suspensión de la publicación de los Oferentes de los Servicios, esto con el fin de garantizar la calidad de los servicios que los Usuarios pueden encontrar en la APP.  
+
+10.	 DENEGACIÓN Y RETIRADA DEL ACCESO A LA APLICACIÓN
+
+En el Evento en que un OFERENTE DE SERVICIOS incumpla estos Términos y Condiciones, o cualesquiera otras disposiciones que resulten de aplicación, Master247 podrá suspender su acceso a la aplicación.
+
+11.	 TÉRMINOS Y CONDICIONES
+
+EL OFERENTE DE LOS SERVICIOS acepta expresamente los Términos y Condiciones, siendo condición esencial para la utilización de la aplicación. En el evento en que se encuentre en desacuerdo con estos Términos y Condiciones, solicitamos abandonar la aplicación inmediatamente. Master247 podrá modificar los presentes términos y condiciones, avisando a los usuarios de la aplicación mediante publicación en la página web www.master247.org o mediante la difusión de las modificación por algún medio electrónico, redes sociales, SMS y/o correo electrónico, lo cual se entenderá aceptado por el usuario si éste continua con el uso de la aplicación.
+
+12.	 JURISDICCIÓN
+
+Estos términos y condiciones y todo lo que tenga que ver con esta aplicación, se rigen por las leyes de Ecuador.
+
+13.	 USO DE INFORMACIÓN NO PERSONAL
+
+Master247 también recolecta información no personal en forma agregada para seguimiento de datos como el número total de descargas de la aplicación. Utilizamos esta información, que permanece en forma agregada, para entender el comportamiento de la aplicación. 
+
+14.	 USO DE DIRECCIONES IP
+
+Una dirección de Protocolo de Internet (IP) es un conjunto de números que se asigna automáticamente a su o dispositivo móvil cuando usted accede a su proveedor de servicios de internet, o a través de la red de área local (LAN) de su organización o la red de área amplia (WAN). Los servidores web automáticamente identifican su dispositivo móvil por la dirección IP asignada a él durante su sesión en línea.
+
+Master247 podrá recolectar direcciones IP para propósitos de administración de sistemas y para auditar el uso de nuestro sitio, todo lo anterior de acuerdo con la autorización de protección de datos que se suscribe para tal efecto. Normalmente no vinculamos la dirección IP de un OFERENTE DE SERVICIOS con la información personal de ese usuario, lo que significa que cada sesión de usuario se registra, pero el usuario sigue siendo anónimo para nosotros. Sin embargo, podemos usar las direcciones IP para identificar a los OFERENTES DE SERVICIOS de nuestro sitio cuando sea necesario con el objeto de exigir el cumplimiento de los términos de uso del sitio, o para proteger nuestro servicio, sitio u otros usuarios, o causas solicitadas por autoridades judiciales. 
+
+15.	 SEGURIDAD
+
+Master247 está comprometido en la protección de la seguridad de su información personal. Master247 tiene implementados mecanismos de seguridad que aseguran la protección de la información personal, así como los accesos únicamente al personal y sistemas autorizados, también contra la pérdida, uso indebido y alteración de sus datos de OFERENTE DE SERVICIOS bajo nuestro control.
+
+Excepto como se indica a continuación, sólo personal autorizado tiene acceso a la información que nos proporciona. Además, hemos impuesto reglas estrictas a los empleados de Master247 con acceso a las bases de datos que almacenan información del OFERENTE DE SERVICIOS o a los servidores que hospedan nuestros servicios. 
+
+© 2019 Master247
+</mutableString>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZON-eM-QVX" firstAttribute="trailing" secondItem="7tG-Jd-vI5" secondAttribute="trailing" constant="20" id="9lT-V5-0g1"/>
+                            <constraint firstItem="7tG-Jd-vI5" firstAttribute="leading" secondItem="ZON-eM-QVX" secondAttribute="leading" constant="20" id="B3o-1r-Z8U"/>
                             <constraint firstItem="2w8-qb-uJy" firstAttribute="top" secondItem="ZON-eM-QVX" secondAttribute="top" constant="20" id="E7n-9I-Z3r"/>
+                            <constraint firstItem="7tG-Jd-vI5" firstAttribute="top" secondItem="roc-2y-wWP" secondAttribute="bottom" constant="10" id="M7s-Sf-2D2"/>
                             <constraint firstItem="f8H-qj-r3E" firstAttribute="leading" secondItem="ZON-eM-QVX" secondAttribute="leading" constant="20" id="QyF-0d-BpN"/>
                             <constraint firstItem="ZON-eM-QVX" firstAttribute="trailing" secondItem="f8H-qj-r3E" secondAttribute="trailing" constant="20" id="UsE-vc-j9a"/>
                             <constraint firstItem="ZON-eM-QVX" firstAttribute="trailing" secondItem="roc-2y-wWP" secondAttribute="trailing" constant="20" id="WUc-Ch-JhE"/>
+                            <constraint firstItem="f8H-qj-r3E" firstAttribute="top" secondItem="7tG-Jd-vI5" secondAttribute="bottom" constant="20" id="dBt-RV-Tty"/>
                             <constraint firstItem="f8H-qj-r3E" firstAttribute="bottom" secondItem="ZON-eM-QVX" secondAttribute="bottom" id="fSz-iT-KqN"/>
                             <constraint firstItem="roc-2y-wWP" firstAttribute="leading" secondItem="ZON-eM-QVX" secondAttribute="leading" constant="20" id="m9D-EH-4US"/>
                             <constraint firstItem="2w8-qb-uJy" firstAttribute="leading" secondItem="ZON-eM-QVX" secondAttribute="leading" constant="20" id="rQ7-p0-IAg"/>
@@ -192,115 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU7-Vy-tJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="807"/>
-        </scene>
-        <!--OfferentsVC-->
-        <scene sceneID="l01-0d-f2L">
-            <objects>
-                <viewController id="0HJ-Ht-PM6" customClass="OfferentsVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AzK-a7-gSF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCz-cP-cmt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oferentes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp7-pg-8TR">
-                                        <rect key="frame" x="146.33333333333334" y="70" width="82.666666666666657" height="24.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGB-MS-3VM">
-                                        <rect key="frame" x="325" y="67.333333333333329" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="bXH-Lf-aSd"/>
-                                            <constraint firstAttribute="height" constant="30" id="nAv-h0-Aoo"/>
-                                        </constraints>
-                                        <state key="normal" image="WhiteConfigIcon"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="qGB-MS-3VM" firstAttribute="centerY" secondItem="Xp7-pg-8TR" secondAttribute="centerY" id="3YU-eO-DQB"/>
-                                    <constraint firstItem="Xp7-pg-8TR" firstAttribute="centerX" secondItem="sCz-cP-cmt" secondAttribute="centerX" id="ORh-tD-Q17"/>
-                                    <constraint firstAttribute="trailing" secondItem="qGB-MS-3VM" secondAttribute="trailing" constant="20" id="jMH-Kw-7w5"/>
-                                    <constraint firstItem="Xp7-pg-8TR" firstAttribute="top" secondItem="sCz-cP-cmt" secondAttribute="top" constant="70" id="tVH-eM-sL3"/>
-                                    <constraint firstAttribute="height" constant="120" id="x5K-Kx-pjv"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzA-G3-PVY">
-                                <rect key="frame" x="20" y="72.333333333333329" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="EAx-ge-Gr4"/>
-                                    <constraint firstAttribute="height" constant="20" id="gZo-pq-7G2"/>
-                                </constraints>
-                                <state key="normal" image="BackArrowWhite"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="0HJ-Ht-PM6" eventType="touchUpInside" id="nkh-h9-CaA"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E9S-Zb-Gh0">
-                                <rect key="frame" x="0.0" y="120" width="375" height="658"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferentsCell" rowHeight="150" id="4iG-Wc-mZb" customClass="OfferentCell" customModule="Master247" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4iG-Wc-mZb" id="UVA-3l-NZa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.66666666666666"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del oferente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsK-gj-kLd">
-                                                    <rect key="frame" x="108.66666666666669" y="18" width="158" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="electrician" translatesAutoresizingMaskIntoConstraints="NO" id="veQ-BA-RKx">
-                                                    <rect key="frame" x="147.66666666666666" y="49" width="80" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="NDR-ud-hyW"/>
-                                                        <constraint firstAttribute="height" constant="80" id="vIa-CG-jHL"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="veQ-BA-RKx" firstAttribute="top" secondItem="vsK-gj-kLd" secondAttribute="bottom" constant="10" id="3v7-nA-xl5"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="veQ-BA-RKx" secondAttribute="bottom" constant="10" id="X8Y-Z7-Cmb"/>
-                                                <constraint firstItem="vsK-gj-kLd" firstAttribute="centerX" secondItem="UVA-3l-NZa" secondAttribute="centerX" id="fwL-yo-TVn"/>
-                                                <constraint firstItem="veQ-BA-RKx" firstAttribute="centerX" secondItem="UVA-3l-NZa" secondAttribute="centerX" id="goq-Vn-xQW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="offerentNameLabel" destination="vsK-gj-kLd" id="eUF-uP-JP3"/>
-                                            <outlet property="profileImage" destination="veQ-BA-RKx" id="A7D-NB-joo"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="uzA-G3-PVY" firstAttribute="centerY" secondItem="Xp7-pg-8TR" secondAttribute="centerY" id="0aV-x0-5Qv"/>
-                            <constraint firstItem="Sxe-wy-gw5" firstAttribute="trailing" secondItem="E9S-Zb-Gh0" secondAttribute="trailing" id="D9i-RR-aK3"/>
-                            <constraint firstItem="sCz-cP-cmt" firstAttribute="top" secondItem="AzK-a7-gSF" secondAttribute="top" id="Egv-AE-1kM"/>
-                            <constraint firstItem="E9S-Zb-Gh0" firstAttribute="top" secondItem="sCz-cP-cmt" secondAttribute="bottom" id="Qsz-6W-8W2"/>
-                            <constraint firstItem="uzA-G3-PVY" firstAttribute="leading" secondItem="Sxe-wy-gw5" secondAttribute="leading" constant="20" id="e1j-4E-pKO"/>
-                            <constraint firstItem="E9S-Zb-Gh0" firstAttribute="leading" secondItem="Sxe-wy-gw5" secondAttribute="leading" id="fWk-DV-XPH"/>
-                            <constraint firstItem="sCz-cP-cmt" firstAttribute="leading" secondItem="Sxe-wy-gw5" secondAttribute="leading" id="hDG-il-srQ"/>
-                            <constraint firstItem="sCz-cP-cmt" firstAttribute="trailing" secondItem="Sxe-wy-gw5" secondAttribute="trailing" id="hFp-bz-54S"/>
-                            <constraint firstItem="Sxe-wy-gw5" firstAttribute="bottom" secondItem="E9S-Zb-Gh0" secondAttribute="bottom" id="hxi-0P-Ooy"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Sxe-wy-gw5"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="E9S-Zb-Gh0" id="aJA-DE-TOH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P3B-3Y-43J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="568.79999999999995" y="135.96059113300493"/>
+            <point key="canvasLocation" x="-178.40000000000001" y="806.89655172413802"/>
         </scene>
         <!--Client MenuVC-->
         <scene sceneID="5OC-22-a7u">
@@ -395,6 +515,123 @@
             </objects>
             <point key="canvasLocation" x="-178" y="-526"/>
         </scene>
+        <!--Select CategoryVC-->
+        <scene sceneID="aQk-6c-LzG">
+            <objects>
+                <viewController id="WRG-7o-PwT" customClass="SelectCategoryVC" customModule="Master247" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNc-MT-he6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzO-m8-LdZ">
+                                <rect key="frame" x="20" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="EVg-6f-X8c"/>
+                                    <constraint firstAttribute="width" constant="20" id="WdW-cN-Rka"/>
+                                </constraints>
+                                <state key="normal" image="BackArrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="WRG-7o-PwT" eventType="touchUpInside" id="HKX-LY-PiB"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qzD-cu-kKY" userLabel="MessageStack">
+                                <rect key="frame" x="20" y="134" width="175.33333333333334" height="46.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haz una busqueda de:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiY-ck-L2r">
+                                        <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="23.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Una o mas categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9j-PR-vOr">
+                                        <rect key="frame" x="0.0" y="23.333333333333343" width="175.33333333333334" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOb-Ig-Tdz" customClass="ActionButton" customModule="Master247" customModuleProvider="target">
+                                <rect key="frame" x="20" y="728" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.45882352939999999" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rVD-f8-lP0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="¡SIGUIENTE!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="WRG-7o-PwT" eventType="touchUpInside" id="naQ-kb-jM9"/>
+                                    <segue destination="vcA-AN-Kij" kind="show" id="DA9-7j-3zt"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-Qw-n6A">
+                                <rect key="frame" x="20" y="210.66666666666663" width="335" height="418"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ApplicantCategoryCell" rowHeight="80" id="eOq-Od-hVY" customClass="ApplicantCategoryCell" customModule="Master247" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eOq-Od-hVY" id="Fbc-cq-ofA">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="79.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2D-L6-7cN">
+                                                    <rect key="frame" x="109" y="29.333333333333329" width="117" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F2D-L6-7cN" firstAttribute="centerY" secondItem="Fbc-cq-ofA" secondAttribute="centerY" id="urp-Iq-52L"/>
+                                                <constraint firstItem="F2D-L6-7cN" firstAttribute="centerX" secondItem="Fbc-cq-ofA" secondAttribute="centerX" id="xTL-AZ-EH0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryTitle" destination="F2D-L6-7cN" id="rML-cL-246"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haz clic sobre una categoria y aqui se listaran todas las que selecciones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-fw-J2j">
+                                <rect key="frame" x="20" y="658.66666666666663" width="335" height="49.333333333333371"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MxN-V8-Suc" firstAttribute="trailing" secondItem="0ay-fw-J2j" secondAttribute="trailing" constant="20" id="1gV-kf-v79"/>
+                            <constraint firstItem="qzD-cu-kKY" firstAttribute="leading" secondItem="MxN-V8-Suc" secondAttribute="leading" constant="20" id="5Rx-BZ-rF0"/>
+                            <constraint firstItem="dbw-Qw-n6A" firstAttribute="leading" secondItem="MxN-V8-Suc" secondAttribute="leading" constant="20" id="6yR-iZ-6tt"/>
+                            <constraint firstItem="0ay-fw-J2j" firstAttribute="centerX" secondItem="dbw-Qw-n6A" secondAttribute="centerX" id="Ayk-fH-LvY"/>
+                            <constraint firstItem="0ay-fw-J2j" firstAttribute="leading" secondItem="MxN-V8-Suc" secondAttribute="leading" constant="20" id="BMx-cq-KAS"/>
+                            <constraint firstItem="nzO-m8-LdZ" firstAttribute="top" secondItem="MxN-V8-Suc" secondAttribute="top" constant="20" id="FtO-hD-JfO"/>
+                            <constraint firstItem="MxN-V8-Suc" firstAttribute="trailing" secondItem="lOb-Ig-Tdz" secondAttribute="trailing" constant="20" id="a3m-oQ-X4Y"/>
+                            <constraint firstItem="0ay-fw-J2j" firstAttribute="top" secondItem="dbw-Qw-n6A" secondAttribute="bottom" constant="30" id="cUu-6H-xJU"/>
+                            <constraint firstItem="MxN-V8-Suc" firstAttribute="trailing" secondItem="dbw-Qw-n6A" secondAttribute="trailing" constant="20" id="eFT-RL-9vP"/>
+                            <constraint firstItem="nzO-m8-LdZ" firstAttribute="leading" secondItem="MxN-V8-Suc" secondAttribute="leading" constant="20" id="gyx-DT-Pa5"/>
+                            <constraint firstItem="lOb-Ig-Tdz" firstAttribute="top" secondItem="0ay-fw-J2j" secondAttribute="bottom" constant="20" id="pFB-bt-O5G"/>
+                            <constraint firstItem="qzD-cu-kKY" firstAttribute="top" secondItem="nzO-m8-LdZ" secondAttribute="bottom" constant="50" id="qaJ-5b-vhZ"/>
+                            <constraint firstItem="lOb-Ig-Tdz" firstAttribute="bottom" secondItem="MxN-V8-Suc" secondAttribute="bottom" id="vVh-Qb-B5n"/>
+                            <constraint firstItem="dbw-Qw-n6A" firstAttribute="top" secondItem="qzD-cu-kKY" secondAttribute="bottom" constant="30" id="y8a-Kp-FpI"/>
+                            <constraint firstItem="lOb-Ig-Tdz" firstAttribute="leading" secondItem="MxN-V8-Suc" secondAttribute="leading" constant="20" id="yqc-td-fSV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MxN-V8-Suc"/>
+                    </view>
+                    <connections>
+                        <outlet property="chosenCategoriesLabel" destination="0ay-fw-J2j" id="cgn-zm-LtR"/>
+                        <outlet property="nextButton" destination="lOb-Ig-Tdz" id="xA7-ar-2FO"/>
+                        <outlet property="tableView" destination="dbw-Qw-n6A" id="nQI-cj-Dlo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWY-5u-Lww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.79999999999995" y="806.89655172413802"/>
+        </scene>
         <!--IdentificationVC-->
         <scene sceneID="5FE-Zo-36M">
             <objects>
@@ -469,7 +706,7 @@
                                     <constraint firstAttribute="height" constant="50" id="PTX-Rj-eKV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="¡SIGUIENTE!">
+                                <state key="normal" title="¡YA CASI TERMINAS!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -511,7 +748,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qD-gW-PkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="1487"/>
+            <point key="canvasLocation" x="1262" y="807"/>
         </scene>
         <!--CertificateVC-->
         <scene sceneID="zQd-TG-eUB">
@@ -618,7 +855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwo-2b-guB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492" y="1487"/>
+            <point key="canvasLocation" x="2044" y="807"/>
         </scene>
         <!--Profile ImageVC-->
         <scene sceneID="Val-oR-FXD">
@@ -712,6 +949,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="bBc-My-T7G" eventType="touchUpInside" id="qXf-hw-bdF"/>
+                                    <segue destination="sQN-Rz-vhX" kind="show" id="dOY-UT-oA9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -751,7 +989,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jze-03-JHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="1487"/>
+            <point key="canvasLocation" x="2738" y="807"/>
         </scene>
     </scenes>
     <resources>
@@ -765,4 +1003,8 @@
         <image name="WhiteConfigIcon" width="240" height="240"/>
         <image name="electrician" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dOY-UT-oA9"/>
+        <segue reference="0uj-W8-p1p"/>
+    </inferredMetricsTieBreakers>
 </document>

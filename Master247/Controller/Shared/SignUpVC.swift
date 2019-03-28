@@ -102,8 +102,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             "nameAndLastname": nameAndLastname,
             "phoneNumber": phonenumber,
             "email": email,
-            "password": password,
-            "isAdmin": false,
+            "role": "client",
             "timestamp": Timestamp()
         ]
         
